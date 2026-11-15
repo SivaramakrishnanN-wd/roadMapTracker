@@ -1,0 +1,4704 @@
+{
+ "meta": {
+  "name": "RoadmapTrack plan",
+  "startDate": "2026-11-16",
+  "endDate": "2027-02-13",
+  "totalDays": 90,
+  "weekdayHours": 2,
+  "weekendHours": 5,
+  "version": "1.0",
+  "note": "Sunday Feb 14 2027 is not part of the plan (90 days end on Saturday Feb 13)."
+ },
+ "areas": [
+  "Diagnostics & Assessment",
+  "JavaScript",
+  "React",
+  "TypeScript",
+  "Redux Toolkit & RTK Query",
+  "Node.js & Express",
+  "SQL & PostgreSQL",
+  "Auth & Security",
+  "Testing",
+  "Next.js",
+  "GraphQL",
+  "Git, Docker, CI/CD & Deployment",
+  "Frontend System Design",
+  "Backend System Design",
+  "DSA",
+  "TaskFlow Project",
+  "Interview Prep & Mocks"
+ ],
+ "days": [
+  {
+   "dayNumber": 1,
+   "date": "2026-11-16",
+   "weekday": "Monday",
+   "weekNumber": 1,
+   "plannedHours": 2,
+   "topic": "Diagnostic Assessment #1: JavaScript, React & TypeScript",
+   "area": "Diagnostics & Assessment",
+   "isStretchDay": false,
+   "expectedOutcome": "Baseline skill map and a prioritized gap list that tunes the remaining weeks",
+   "milestone": "Diagnostic Assessment #1: JavaScript, React & TypeScript",
+   "activities": [
+    {
+     "id": "d01-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Timed 45-min self-quiz: closures, this, event loop, promises, hooks rules, memoization, keys, context re-renders, basic TypeScript types; rate each area 1-5 and list gaps",
+     "minutes": 40,
+     "area": "Diagnostics & Assessment",
+     "isStretch": false
+    },
+    {
+     "id": "d01-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Timed tasks (45 min): write debounce(), a useFetch hook and a nested-array flatten without looking anything up",
+     "minutes": 45,
+     "area": "Diagnostics & Assessment",
+     "isStretch": false
+    },
+    {
+     "id": "d01-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Arrays & Hashing: Baseline (untimed): Two Sum, Contains Duplicate; note which approach you reach for first",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d01-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Diagnostic Assessment #1' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Diagnostics & Assessment",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 2,
+   "date": "2026-11-17",
+   "weekday": "Tuesday",
+   "weekNumber": 1,
+   "plannedHours": 2,
+   "topic": "Diagnostic Assessment #2: DSA, Node, SQL, Git & Docker",
+   "area": "Diagnostics & Assessment",
+   "isStretchDay": false,
+   "expectedOutcome": "Backend, DSA and tooling baseline recorded; pacing for later weeks confirmed",
+   "milestone": "Diagnostic Assessment #2: DSA, Node, SQL, Git & Docker",
+   "activities": [
+    {
+     "id": "d02-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Short probes: write a SQL JOIN + GROUP BY, explain Node's event loop, read a Dockerfile, explain git merge vs rebase; note every unfamiliar area",
+     "minutes": 40,
+     "area": "Diagnostics & Assessment",
+     "isStretch": false
+    },
+    {
+     "id": "d02-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Create a minimal Express hello server and run a JOIN/GROUP BY query on sample data (online SQL playground)",
+     "minutes": 45,
+     "area": "Diagnostics & Assessment",
+     "isStretch": false
+    },
+    {
+     "id": "d02-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Arrays & Hashing: Valid Anagram, Group Anagrams (frequency-map pattern)",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d02-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Diagnostic Assessment #2' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Diagnostics & Assessment",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 3,
+   "date": "2026-11-18",
+   "weekday": "Wednesday",
+   "weekNumber": 1,
+   "plannedHours": 2,
+   "topic": "FSD Foundations: RADIO Framework & Requirements",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Owns a repeatable framework for any frontend design question",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d03-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Concepts: RADIO (Requirements, Architecture, Data model, Interface/API, Optimizations), functional vs non-functional requirements, scope and assumptions, component/data-flow diagrams, interview time-boxing. Concept session + practice: Apply RADIO to a Like button and a Star Rating in 30 min each; write the checklist as a reusable template",
+     "minutes": 70,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d03-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Arrays & Hashing: Top K Frequent Elements, Product of Array Except Self",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d03-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Rewrite the checklist for this topic and make 5 flashcards (20 min)",
+     "minutes": 20,
+     "area": "Frontend System Design",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 4,
+   "date": "2026-11-19",
+   "weekday": "Thursday",
+   "weekNumber": 1,
+   "plannedHours": 2,
+   "topic": "JavaScript Core: Scope, Closures, Hoisting & Execution Context",
+   "area": "JavaScript",
+   "isStretchDay": false,
+   "expectedOutcome": "Explains closures and hoisting with examples; solves output-prediction questions confidently",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d04-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Execution context and call stack, lexical scope chain, closures, var/let/const, hoisting, TDZ, IIFE, closure pitfalls in loops",
+     "minutes": 40,
+     "area": "JavaScript",
+     "isStretch": false
+    },
+    {
+     "id": "d04-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Write once(), memoize(), a counter with private state and a rate-limited function using closures; predict output of 10 tricky snippets",
+     "minutes": 45,
+     "area": "JavaScript",
+     "isStretch": false
+    },
+    {
+     "id": "d04-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Arrays & Hashing: Longest Consecutive Sequence, Valid Sudoku",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d04-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'JavaScript Core' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "JavaScript",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 5,
+   "date": "2026-11-20",
+   "weekday": "Friday",
+   "weekNumber": 1,
+   "plannedHours": 2,
+   "topic": "JavaScript Core: this, Prototypes, Classes & Object Model",
+   "area": "JavaScript",
+   "isStretchDay": false,
+   "expectedOutcome": "Explains this-binding and prototypal inheritance and writes related polyfills from scratch",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d05-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "this binding rules, call/apply/bind, arrow functions, prototype chain, new operator, class syntax, inheritance, getters/setters, Object.create, property descriptors",
+     "minutes": 20,
+     "area": "JavaScript",
+     "isStretch": false
+    },
+    {
+     "id": "d05-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Implement polyfills for bind and the new operator; build an inheritance chain with prototypes and with classes; implement a simple EventEmitter",
+     "minutes": 50,
+     "area": "JavaScript",
+     "isStretch": false
+    },
+    {
+     "id": "d05-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Arrays & Hashing: Encode/Decode Strings, Subarray Sum Equals K (prefix + hashmap); re-solve 2 earlier problems without hints",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d05-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "20-min weekly quiz on JS closures/this/prototypes and diagnostics; fix every wrong answer and update the error log",
+     "minutes": 20,
+     "area": "JavaScript",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 6,
+   "date": "2026-11-21",
+   "weekday": "Saturday",
+   "weekNumber": 1,
+   "plannedHours": 5,
+   "topic": "Modern JavaScript: Iterators, Generators, Modules & Collections",
+   "area": "JavaScript",
+   "isStretchDay": false,
+   "expectedOutcome": "Comfortable with ES6+ features that are common interview probes",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d06-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Iterators/iterables, generators, Symbol, Map/Set/WeakMap/WeakSet, Proxy/Reflect, ES modules vs CommonJS, optional chaining, destructuring, immutability patterns",
+     "minutes": 70,
+     "area": "JavaScript",
+     "isStretch": false
+    },
+    {
+     "id": "d06-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a custom iterable range(), an ID generator using generators, an LRU-style cache with Map and a deepClone handling Date/Map/circular refs",
+     "minutes": 130,
+     "area": "JavaScript",
+     "isStretch": false
+    },
+    {
+     "id": "d06-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Arrays & Hashing: Timed mixed set: 3 Easy/Medium array-hash problems in 45 min; write pattern notes",
+     "minutes": 45,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d06-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Spaced revision: re-do 2 tasks from the previous two weeks; update flashcards and the error log",
+     "minutes": 55,
+     "area": "JavaScript",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 7,
+   "date": "2026-11-22",
+   "weekday": "Sunday",
+   "weekNumber": 1,
+   "plannedHours": 5,
+   "topic": "FSD Practice: Autocomplete / Typeahead",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Presents an end-to-end autocomplete design in 30 minutes and has a working component",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d07-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Full design walkthrough (requirements, architecture, data/API, optimizations): Autocomplete / Typeahead. Cover: Requirements, component architecture, debounce/throttle, request cancellation and race conditions, client cache, ranking, keyboard navigation and ARIA combobox, match highlighting, performance",
+     "minutes": 120,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d07-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build an Autocomplete React component with debounce, AbortController, cache and keyboard navigation",
+     "minutes": 60,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d07-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Arrays & Hashing: Weekly consolidation: re-solve 3 problems from this week without hints; write the hashmap pattern template",
+     "minutes": 60,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d07-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Weekly review (30m): log diagnostic scores and gaps; JS rapid-fire on closures/this/prototypes, 15 questions (30m)",
+     "minutes": 60,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 8,
+   "date": "2026-11-23",
+   "weekday": "Monday",
+   "weekNumber": 2,
+   "plannedHours": 2,
+   "topic": "Async JavaScript: Event Loop, Callbacks & Promises",
+   "area": "JavaScript",
+   "isStretchDay": false,
+   "expectedOutcome": "Predicts async execution order correctly and understands microtask priority",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d08-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Call stack, task vs microtask queues, timers, callback hell, Promise states, chaining, error propagation, queueMicrotask",
+     "minutes": 40,
+     "area": "JavaScript",
+     "isStretch": false
+    },
+    {
+     "id": "d08-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Predict and verify output order for 10 event-loop puzzles; implement promisify() and a minimal Promise (then/catch)",
+     "minutes": 45,
+     "area": "JavaScript",
+     "isStretch": false
+    },
+    {
+     "id": "d08-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Two Pointers & Sliding Window: Valid Palindrome, Two Sum II",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d08-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Async JavaScript' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "JavaScript",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 9,
+   "date": "2026-11-24",
+   "weekday": "Tuesday",
+   "weekNumber": 2,
+   "plannedHours": 2,
+   "topic": "Async JavaScript: async/await, Combinators & Cancellation",
+   "area": "JavaScript",
+   "isStretchDay": false,
+   "expectedOutcome": "Writes robust async code and implements promise combinators from scratch",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d09-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "async/await, try/catch patterns, Promise.all/allSettled/race/any, sequential vs parallel, retries with backoff, AbortController, fetch error handling",
+     "minutes": 40,
+     "area": "JavaScript",
+     "isStretch": false
+    },
+    {
+     "id": "d09-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Write fetchWithRetry (timeout + abort), a concurrency limiter (run N tasks at a time) and polyfills for Promise.all and Promise.race",
+     "minutes": 45,
+     "area": "JavaScript",
+     "isStretch": false
+    },
+    {
+     "id": "d09-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Two Pointers & Sliding Window: 3Sum, Container With Most Water",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d09-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Async JavaScript' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "JavaScript",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 10,
+   "date": "2026-11-25",
+   "weekday": "Wednesday",
+   "weekNumber": 2,
+   "plannedHours": 2,
+   "topic": "FSD: Browser Rendering Pipeline & Critical Rendering Path",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Explains how the browser renders a page and where performance is lost",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d10-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Concepts: HTML/CSS parsing, DOM/CSSOM, render tree, layout, paint, composite, reflow vs repaint, layout thrashing, render-blocking resources, async/defer, event loop and rendering. Concept session + practice: Record a Chrome Performance profile of a real site; identify layout/paint cost and list 5 optimizations",
+     "minutes": 70,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d10-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Two Pointers & Sliding Window: Trapping Rain Water (two pointers)",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d10-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Rewrite the checklist for this topic and make 5 flashcards (20 min); skim last Sunday's design diagram",
+     "minutes": 20,
+     "area": "Frontend System Design",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 11,
+   "date": "2026-11-26",
+   "weekday": "Thursday",
+   "weekNumber": 2,
+   "plannedHours": 2,
+   "topic": "React Advanced I: Rendering, Reconciliation & Performance",
+   "area": "React",
+   "isStretchDay": false,
+   "expectedOutcome": "Diagnoses and fixes unnecessary re-renders with the Profiler and explains why each fix works",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d11-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Render/commit phases, reconciliation and keys, why components re-render, React.memo, useMemo, useCallback (and when not to use them), context re-render pitfalls, Profiler, list virtualization intro",
+     "minutes": 40,
+     "area": "React",
+     "isStretch": false
+    },
+    {
+     "id": "d11-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Take a deliberately slow React list/dashboard, profile it and fix it with memo, state colocation and virtualization (react-window); record before/after render counts",
+     "minutes": 45,
+     "area": "React",
+     "isStretch": false
+    },
+    {
+     "id": "d11-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Two Pointers & Sliding Window: Best Time to Buy/Sell Stock, Longest Substring Without Repeating Characters",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d11-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'React Advanced I' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "React",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 12,
+   "date": "2026-11-27",
+   "weekday": "Friday",
+   "weekNumber": 2,
+   "plannedHours": 2,
+   "topic": "Weekly Build: JavaScript Interview Utility Library",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "A tested, reusable utility library and 10 interview-ready implementations",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d12-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Consolidate debounce, throttle, curry, compose, memoize, deepClone, deepEqual, flatten, groupBy and Array.prototype polyfills",
+     "minutes": 20,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d12-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Create a utils package with all functions and plain-assert tests (Jest comes later); time yourself on each implementation",
+     "minutes": 50,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d12-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Two Pointers & Sliding Window: Longest Repeating Character Replacement, Permutation in String",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d12-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "20-min weekly quiz on async JS and React rendering/patterns; fix every wrong answer and update the error log",
+     "minutes": 20,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 13,
+   "date": "2026-11-28",
+   "weekday": "Saturday",
+   "weekNumber": 2,
+   "plannedHours": 5,
+   "topic": "React Advanced II: Concurrency, Patterns & Code Splitting",
+   "area": "React",
+   "isStretchDay": false,
+   "expectedOutcome": "Applies advanced React patterns and explains when each is appropriate",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d13-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Suspense, React.lazy/code splitting, error boundaries, useTransition/useDeferredValue, custom hook design, compound components, render props/HOC, portals, refs",
+     "minutes": 70,
+     "area": "React",
+     "isStretch": false
+    },
+    {
+     "id": "d13-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Add route-level lazy loading and an error boundary to the storefront; build a compound Tabs component and a useDeferredValue search over a 10k-item list",
+     "minutes": 130,
+     "area": "React",
+     "isStretch": false
+    },
+    {
+     "id": "d13-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Two Pointers & Sliding Window: Minimum Window Substring, Sliding Window Maximum (deque)",
+     "minutes": 45,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d13-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Spaced revision: re-do 2 tasks from the previous two weeks; update flashcards and the error log",
+     "minutes": 55,
+     "area": "React",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 14,
+   "date": "2026-11-29",
+   "weekday": "Sunday",
+   "weekNumber": 2,
+   "plannedHours": 5,
+   "topic": "FSD Practice: E-commerce Product Listing Page",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Designs a scalable product listing page and has a working filtered grid",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d14-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Full design walkthrough (requirements, architecture, data/API, optimizations): E-commerce Product Listing Page. Cover: Filters/sort/pagination state in the URL, faceted filters, caching, skeletons, image lazy loading, SEO and rendering mode, analytics, accessibility",
+     "minutes": 120,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d14-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a product grid with URL-synced filters, sort and pagination using Fake Store API",
+     "minutes": 60,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d14-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Two Pointers & Sliding Window: Timed set: 3 mixed two-pointer/sliding-window problems in 45 min; write the template",
+     "minutes": 60,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d14-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Weekly review + mini mock: 20 JS output-prediction questions on async/event loop; self-score",
+     "minutes": 60,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 15,
+   "date": "2026-11-30",
+   "weekday": "Monday",
+   "weekNumber": 3,
+   "plannedHours": 2,
+   "topic": "TypeScript I: Type System Fundamentals",
+   "area": "TypeScript",
+   "isStretchDay": false,
+   "expectedOutcome": "Writes strictly typed code and chooses between type and interface",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d15-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "tsconfig strict mode, primitives, arrays/tuples, type vs interface, unions/intersections, literal types, enums vs const objects, optional/readonly, type inference",
+     "minutes": 40,
+     "area": "TypeScript",
+     "isStretch": false
+    },
+    {
+     "id": "d15-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Set up a strict-mode TS playground; model User, Product and Order types, write typed functions and fix 15 compiler errors in a sample",
+     "minutes": 45,
+     "area": "TypeScript",
+     "isStretch": false
+    },
+    {
+     "id": "d15-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Stack, Queue & Binary Search: Valid Parentheses, Min Stack",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d15-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'TypeScript I' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "TypeScript",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 16,
+   "date": "2026-12-01",
+   "weekday": "Tuesday",
+   "weekNumber": 3,
+   "plannedHours": 2,
+   "topic": "TypeScript II: Narrowing, Type Guards & Discriminated Unions",
+   "area": "TypeScript",
+   "isStretchDay": false,
+   "expectedOutcome": "Eliminates any and models state safely with unions",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d16-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "typeof/instanceof/in narrowing, custom type guards, unknown vs any, never and exhaustive checks, discriminated unions, assertion functions",
+     "minutes": 40,
+     "area": "TypeScript",
+     "isStretch": false
+    },
+    {
+     "id": "d16-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Model an API result as Success | Error union; build a type-safe reducer with a discriminated action union and exhaustive switch",
+     "minutes": 45,
+     "area": "TypeScript",
+     "isStretch": false
+    },
+    {
+     "id": "d16-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Stack, Queue & Binary Search: Daily Temperatures, Evaluate Reverse Polish Notation",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d16-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'TypeScript II' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "TypeScript",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 17,
+   "date": "2026-12-02",
+   "weekday": "Wednesday",
+   "weekNumber": 3,
+   "plannedHours": 2,
+   "topic": "FSD: Component Design & Composition",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Designs reusable component APIs with clear trade-offs",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d17-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Concepts: Component API design, composition vs inheritance, controlled/uncontrolled, headless components, slots/render props, design tokens, theming, atomic design, folder structure. Concept session + practice: Design prop APIs for Modal, Dropdown and DataTable on paper; justify extensibility vs simplicity",
+     "minutes": 70,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d17-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Stack, Queue & Binary Search: Car Fleet, Largest Rectangle in Histogram (monotonic stack)",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d17-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Rewrite the checklist for this topic and make 5 flashcards (20 min); skim last Sunday's design diagram",
+     "minutes": 20,
+     "area": "Frontend System Design",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 18,
+   "date": "2026-12-03",
+   "weekday": "Thursday",
+   "weekNumber": 3,
+   "plannedHours": 2,
+   "topic": "TypeScript III: Generics",
+   "area": "TypeScript",
+   "isStretchDay": false,
+   "expectedOutcome": "Writes reusable generic abstractions without resorting to any",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d18-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Generic functions/interfaces/classes, constraints (extends), default generics, keyof and indexed access, generic React components, inference pitfalls",
+     "minutes": 40,
+     "area": "TypeScript",
+     "isStretch": false
+    },
+    {
+     "id": "d18-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Write a typed fetchJson<T>() wrapper, generic Stack<T>/Queue<T> and the props for a generic Table<T> component",
+     "minutes": 45,
+     "area": "TypeScript",
+     "isStretch": false
+    },
+    {
+     "id": "d18-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Stack, Queue & Binary Search: Binary Search, Search a 2D Matrix",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d18-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'TypeScript III' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "TypeScript",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 19,
+   "date": "2026-12-04",
+   "weekday": "Friday",
+   "weekNumber": 3,
+   "plannedHours": 2,
+   "topic": "Weekly Build: Typed API Client & Utility Types",
+   "area": "TypeScript",
+   "isStretchDay": false,
+   "expectedOutcome": "A typed API client and working knowledge of utility and mapped types",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d19-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Partial, Required, Pick, Omit, Record, ReturnType, Parameters, Awaited, mapped types, conditional types basics, template literal types, declaration files",
+     "minutes": 20,
+     "area": "TypeScript",
+     "isStretch": false
+    },
+    {
+     "id": "d19-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a fully typed API client for a public API (e.g., JSONPlaceholder): typed endpoints, request/response models, error type; solve 8 type challenges",
+     "minutes": 50,
+     "area": "TypeScript",
+     "isStretch": false
+    },
+    {
+     "id": "d19-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Stack, Queue & Binary Search: Koko Eating Bananas, Find Minimum in Rotated Sorted Array",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d19-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "20-min weekly quiz on TypeScript fundamentals; fix every wrong answer and update the error log",
+     "minutes": 20,
+     "area": "TypeScript",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 20,
+   "date": "2026-12-05",
+   "weekday": "Saturday",
+   "weekNumber": 3,
+   "plannedHours": 5,
+   "topic": "TypeScript with React: Props, Hooks, Events & Context",
+   "area": "TypeScript",
+   "isStretchDay": false,
+   "expectedOutcome": "Builds and types React components and hooks confidently under strict mode",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d20-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Typing props/children, event handlers, useState/useReducer/useRef/useContext generics, forwardRef, generic components, typing custom hooks, React.ComponentProps",
+     "minutes": 70,
+     "area": "TypeScript",
+     "isStretch": false
+    },
+    {
+     "id": "d20-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Convert one existing React mini-app to strict TypeScript; build a typed useLocalStorage<T> hook and a typed Context provider",
+     "minutes": 130,
+     "area": "TypeScript",
+     "isStretch": false
+    },
+    {
+     "id": "d20-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Stack, Queue & Binary Search: Search in Rotated Sorted Array, Time Based Key-Value Store, Queue using Stacks",
+     "minutes": 45,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d20-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Spaced revision: re-do 2 tasks from the previous two weeks; update flashcards and the error log",
+     "minutes": 55,
+     "area": "TypeScript",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 21,
+   "date": "2026-12-06",
+   "weekday": "Sunday",
+   "weekNumber": 3,
+   "plannedHours": 5,
+   "topic": "FSD Practice: Data Table",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Designs a reusable data table and explains virtualization trade-offs",
+   "milestone": "Mock interview #1",
+   "activities": [
+    {
+     "id": "d21-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Full design walkthrough (requirements, architecture, data/API, optimizations): Data Table. Cover: Column config API, sorting/filtering, pagination vs virtualization, sticky headers, editable cells, row selection, export, grid accessibility, large datasets",
+     "minutes": 120,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d21-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a sortable, filterable paginated table; add row virtualization",
+     "minutes": 60,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d21-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Stack, Queue & Binary Search: Timed set: stack + binary search problems in 45 min",
+     "minutes": 60,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d21-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Mock interview #1 (JS + React + TypeScript fundamentals, 45 min, recorded or with a peer) + weekly review (15m)",
+     "minutes": 60,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 22,
+   "date": "2026-12-07",
+   "weekday": "Monday",
+   "weekNumber": 4,
+   "plannedHours": 2,
+   "topic": "Redux Toolkit I: Store, Slices & Typed Hooks",
+   "area": "Redux Toolkit & RTK Query",
+   "isStretchDay": false,
+   "expectedOutcome": "Builds slices with TypeScript and explains RTK vs legacy Redux",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d22-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Redux principles, configureStore, createSlice, Immer, typed hooks (useAppSelector/useAppDispatch), middleware, Redux DevTools, Redux vs Context",
+     "minutes": 40,
+     "area": "Redux Toolkit & RTK Query",
+     "isStretch": false
+    },
+    {
+     "id": "d22-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a typed cart slice (add/remove/update qty, totals selector) with a small React UI",
+     "minutes": 45,
+     "area": "Redux Toolkit & RTK Query",
+     "isStretch": false
+    },
+    {
+     "id": "d22-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Linked Lists: Reverse Linked List, Merge Two Sorted Lists",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d22-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Redux Toolkit I' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Redux Toolkit & RTK Query",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 23,
+   "date": "2026-12-08",
+   "weekday": "Tuesday",
+   "weekNumber": 4,
+   "plannedHours": 2,
+   "topic": "Redux Toolkit II: Async Thunks, Entity Adapter & Selectors",
+   "area": "Redux Toolkit & RTK Query",
+   "isStretchDay": false,
+   "expectedOutcome": "Handles async state and normalized data with RTK",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d23-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "createAsyncThunk lifecycle, error handling, extraReducers builder, createEntityAdapter, memoized selectors (createSelector), listener middleware overview",
+     "minutes": 40,
+     "area": "Redux Toolkit & RTK Query",
+     "isStretch": false
+    },
+    {
+     "id": "d23-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a products slice with createAsyncThunk, entity adapter and selector-based filtering/sorting",
+     "minutes": 45,
+     "area": "Redux Toolkit & RTK Query",
+     "isStretch": false
+    },
+    {
+     "id": "d23-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Linked Lists: Linked List Cycle, Reorder List",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d23-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Redux Toolkit II' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Redux Toolkit & RTK Query",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 24,
+   "date": "2026-12-09",
+   "weekday": "Wednesday",
+   "weekNumber": 4,
+   "plannedHours": 2,
+   "topic": "FSD: State Management Architecture",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Justifies state placement and tooling choices in any design",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d24-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Concepts: Local vs global vs server vs URL vs form state, Context vs Redux vs RTK Query, normalization, derived state, colocation, avoiding prop drilling, state machines overview. Concept session + practice: Classify every piece of state in an e-commerce app (cart, filters, user, products) and choose where each lives",
+     "minutes": 70,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d24-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Linked Lists: Remove Nth Node From End, Middle of the Linked List (fast/slow)",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d24-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Rewrite the checklist for this topic and make 5 flashcards (20 min); skim last Sunday's design diagram",
+     "minutes": 20,
+     "area": "Frontend System Design",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 25,
+   "date": "2026-12-10",
+   "weekday": "Thursday",
+   "weekNumber": 4,
+   "plannedHours": 2,
+   "topic": "RTK Query I: Queries, Mutations & Cache Tags",
+   "area": "Redux Toolkit & RTK Query",
+   "isStretchDay": false,
+   "expectedOutcome": "Understands the RTK Query caching model and tag-based invalidation",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d25-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "createApi/fetchBaseQuery, endpoints and hooks, cache lifetime, providesTags/invalidatesTags, polling, refetchOnFocus, skip, selectFromResult",
+     "minutes": 40,
+     "area": "Redux Toolkit & RTK Query",
+     "isStretch": false
+    },
+    {
+     "id": "d25-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Create an API slice for products/orders (Fake Store API or json-server) with cache invalidation after mutations",
+     "minutes": 45,
+     "area": "Redux Toolkit & RTK Query",
+     "isStretch": false
+    },
+    {
+     "id": "d25-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Linked Lists: Add Two Numbers, Copy List with Random Pointer",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d25-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'RTK Query I' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Redux Toolkit & RTK Query",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 26,
+   "date": "2026-12-11",
+   "weekday": "Friday",
+   "weekNumber": 4,
+   "plannedHours": 2,
+   "topic": "Weekly Build: Mini Storefront with RTK Query",
+   "area": "Redux Toolkit & RTK Query",
+   "isStretchDay": false,
+   "expectedOutcome": "A working storefront demonstrating advanced RTK Query features",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d26-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "RTK Query pagination, optimistic updates (onQueryStarted), prefetching, transformResponse, custom baseQuery with error normalization, RTK Query vs React Query",
+     "minutes": 20,
+     "area": "Redux Toolkit & RTK Query",
+     "isStretch": false
+    },
+    {
+     "id": "d26-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Ship a mini storefront: paginated product list, product detail, cart with optimistic updates, typed end to end",
+     "minutes": 50,
+     "area": "Redux Toolkit & RTK Query",
+     "isStretch": false
+    },
+    {
+     "id": "d26-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Linked Lists: LRU Cache (hashmap + doubly linked list)",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d26-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "20-min weekly quiz on Redux Toolkit and RTK Query; fix every wrong answer and update the error log",
+     "minutes": 20,
+     "area": "Redux Toolkit & RTK Query",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 27,
+   "date": "2026-12-12",
+   "weekday": "Saturday",
+   "weekNumber": 4,
+   "plannedHours": 5,
+   "topic": "Node.js Fundamentals: Runtime, Modules & Streams",
+   "area": "Node.js & Express",
+   "isStretchDay": false,
+   "expectedOutcome": "Explains how Node handles concurrency and uses streams/modules confidently",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d27-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Node architecture (V8, libuv), event loop phases, CommonJS vs ESM, fs/path/os, streams and buffers, process/env, npm scripts, tsx/nodemon",
+     "minutes": 70,
+     "area": "Node.js & Express",
+     "isStretch": false
+    },
+    {
+     "id": "d27-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Write a CLI that streams a large file and counts words; build a small http server without Express; set up a TS Node project",
+     "minutes": 130,
+     "area": "Node.js & Express",
+     "isStretch": false
+    },
+    {
+     "id": "d27-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Linked Lists: Merge k Sorted Lists, Reverse Nodes in k-Group (attempt, then study solution)",
+     "minutes": 45,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d27-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Spaced revision: re-do 2 tasks from the previous two weeks; update flashcards and the error log",
+     "minutes": 55,
+     "area": "Node.js & Express",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 28,
+   "date": "2026-12-13",
+   "weekday": "Sunday",
+   "weekNumber": 4,
+   "plannedHours": 5,
+   "topic": "FSD Practice: Infinite Scrolling Feed",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Designs infinite scroll with correct pagination, dedupe and memory handling",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d28-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Full design walkthrough (requirements, architecture, data/API, optimizations): Infinite Scrolling Feed. Cover: IntersectionObserver, cursor pagination, dedupe, scroll restoration, windowing/memory management, loading/error states, prefetching",
+     "minutes": 120,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d28-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Implement an infinite-scroll feed with IntersectionObserver and a cursor-based mock API",
+     "minutes": 60,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d28-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Linked Lists: Timed set: linked-list problems in 45 min",
+     "minutes": 60,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d28-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Weekly review: TS/RTK flashcards (30m) + explain RTK Query caching aloud (15m) + update error log (15m)",
+     "minutes": 60,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 29,
+   "date": "2026-12-14",
+   "weekday": "Monday",
+   "weekNumber": 5,
+   "plannedHours": 2,
+   "topic": "Express I: Routing, Middleware & Error Handling",
+   "area": "Node.js & Express",
+   "isStretchDay": false,
+   "expectedOutcome": "Clean Express + TS skeleton and TaskFlow repo ready",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d29-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Express app structure, routers, middleware chain, request/response lifecycle, async error handling, Zod validation, request logging, environment config",
+     "minutes": 30,
+     "area": "Node.js & Express",
+     "isStretch": false
+    },
+    {
+     "id": "d29-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build an Express + TS server with a health route, request logger, centralized error handler and a Zod-validated POST endpoint",
+     "minutes": 20,
+     "area": "Node.js & Express",
+     "isStretch": false
+    },
+    {
+     "id": "d29-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Initialize the TaskFlow repo: /server (Express + TS) and /client folders, ESLint/Prettier, .env handling, GitHub remote",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d29-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Trees: Invert Binary Tree, Maximum Depth of Binary Tree",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d29-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Express I' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Node.js & Express",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 30,
+   "date": "2026-12-15",
+   "weekday": "Tuesday",
+   "weekNumber": 5,
+   "plannedHours": 2,
+   "topic": "REST API Design Principles",
+   "area": "Node.js & Express",
+   "isStretchDay": false,
+   "expectedOutcome": "Can design and defend a clean REST API; TaskFlow contract defined",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d30-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Resource modeling, HTTP verbs and status codes, idempotency, pagination/filtering/sorting conventions, versioning, error format, OpenAPI/Swagger",
+     "minutes": 30,
+     "area": "Node.js & Express",
+     "isStretch": false
+    },
+    {
+     "id": "d30-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Implement tasks CRUD with an in-memory store: validation, proper status codes, pagination and filtering query params",
+     "minutes": 20,
+     "area": "Node.js & Express",
+     "isStretch": false
+    },
+    {
+     "id": "d30-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Write the TaskFlow API contract (endpoints, request/response shapes, error format) in docs/api.md",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d30-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Trees: Same Tree, Subtree of Another Tree, Diameter of Binary Tree",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d30-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'REST API Design Principles' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Node.js & Express",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 31,
+   "date": "2026-12-16",
+   "weekday": "Wednesday",
+   "weekNumber": 5,
+   "plannedHours": 2,
+   "topic": "FSD: API Integration, Real-Time & Networking",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Chooses appropriate data-transport patterns with trade-offs",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d31-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Concepts: REST vs GraphQL, polling, long polling, WebSockets, SSE, retries with backoff, request cancellation/dedupe, timeouts, error handling, offline/optimistic strategies. Concept session + practice: Pick and justify the transport for chat, stock ticker, notifications and comments; sketch reconnection logic",
+     "minutes": 70,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d31-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Trees: Level Order Traversal, Binary Tree Right Side View (BFS)",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d31-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Rewrite the checklist for this topic and make 5 flashcards (20 min); skim last Sunday's design diagram",
+     "minutes": 20,
+     "area": "Frontend System Design",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 32,
+   "date": "2026-12-17",
+   "weekday": "Thursday",
+   "weekNumber": 5,
+   "plannedHours": 2,
+   "topic": "Express II: Architecture, Uploads & API Documentation",
+   "area": "Node.js & Express",
+   "isStretchDay": false,
+   "expectedOutcome": "A maintainable backend skeleton ready for PostgreSQL",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d32-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Controller/service/repository separation, dependency injection basics, multer uploads, validation middleware, Swagger UI, graceful shutdown",
+     "minutes": 30,
+     "area": "Node.js & Express",
+     "isStretch": false
+    },
+    {
+     "id": "d32-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Refactor the API into a repository pattern with typed interfaces; add Swagger UI docs and a file-upload endpoint",
+     "minutes": 20,
+     "area": "Node.js & Express",
+     "isStretch": false
+    },
+    {
+     "id": "d32-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Finalize TaskFlow server structure (routes, controllers, services, repositories) with clean commit history",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d32-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Trees: Validate BST, Kth Smallest Element in a BST",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d32-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Express II' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Node.js & Express",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 33,
+   "date": "2026-12-18",
+   "weekday": "Friday",
+   "weekNumber": 5,
+   "plannedHours": 2,
+   "topic": "Weekly Build: TaskFlow Tasks API (In-Memory)",
+   "area": "Node.js & Express",
+   "isStretchDay": false,
+   "expectedOutcome": "Working in-memory API structured for a database swap",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d33-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Layered architecture (routes/controllers/services), CORS, helmet, rate limiting, pino logging, config validation, Postman collections",
+     "minutes": 20,
+     "area": "Node.js & Express",
+     "isStretch": false
+    },
+    {
+     "id": "d33-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Complete tasks and projects endpoints with layered structure; add pino logging, helmet and CORS",
+     "minutes": 20,
+     "area": "Node.js & Express",
+     "isStretch": false
+    },
+    {
+     "id": "d33-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Export a Postman collection and verify every endpoint against the contract",
+     "minutes": 30,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d33-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Trees: Lowest Common Ancestor, Balanced Binary Tree",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d33-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "20-min weekly quiz on Node, Express, REST and SQL basics; fix every wrong answer and update the error log",
+     "minutes": 20,
+     "area": "Node.js & Express",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 34,
+   "date": "2026-12-19",
+   "weekday": "Saturday",
+   "weekNumber": 5,
+   "plannedHours": 5,
+   "topic": "SQL I-II: Querying, Joins & Schema Design",
+   "area": "SQL & PostgreSQL",
+   "isStretchDay": false,
+   "expectedOutcome": "Writes multi-table queries and designs a normalized schema",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d34-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "SELECT/WHERE/GROUP BY/HAVING, aggregates, NULL handling, INNER/LEFT joins, subqueries, CTEs, primary/foreign keys, normalization (1NF-3NF), one-to-many vs many-to-many, constraints; PostgreSQL via Docker + psql",
+     "minutes": 60,
+     "area": "SQL & PostgreSQL",
+     "isStretch": false
+    },
+    {
+     "id": "d34-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Set up Postgres in Docker; solve 15 SQL problems (queries, joins, CTEs); model users, projects, project_members and tasks tables with constraints",
+     "minutes": 40,
+     "area": "SQL & PostgreSQL",
+     "isStretch": false
+    },
+    {
+     "id": "d34-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Design the TaskFlow ERD and write the initial migration SQL",
+     "minutes": 110,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d34-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Trees: Construct Binary Tree from Preorder and Inorder, Binary Tree Maximum Path Sum",
+     "minutes": 45,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d34-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Spaced revision: re-do 2 tasks from the previous two weeks; update flashcards and the error log",
+     "minutes": 45,
+     "area": "SQL & PostgreSQL",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 35,
+   "date": "2026-12-20",
+   "weekday": "Sunday",
+   "weekNumber": 5,
+   "plannedHours": 5,
+   "topic": "FSD Practice: Chat Interface",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Designs a real-time chat UI and handles ordering/retry edge cases",
+   "milestone": "Mock interview #2",
+   "activities": [
+    {
+     "id": "d35-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Full design walkthrough (requirements, architecture, data/API, optimizations): Chat Interface. Cover: Real-time transport (WebSocket/SSE/polling), message ordering, optimistic send and retry, unread counts, scroll anchoring, typing indicators, offline queue, accessibility",
+     "minutes": 120,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d35-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a chat UI with optimistic sending, auto-scroll anchoring and a mock WebSocket",
+     "minutes": 60,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d35-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Trees: Timed set: tree problems in 45 min",
+     "minutes": 60,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d35-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Mock interview #2 (TypeScript, RTK, Node basics, 45 min) + weekly review (15m)",
+     "minutes": 60,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 36,
+   "date": "2026-12-21",
+   "weekday": "Monday",
+   "weekNumber": 6,
+   "plannedHours": 2,
+   "topic": "PostgreSQL III: Indexes, Transactions & Window Functions",
+   "area": "SQL & PostgreSQL",
+   "isStretchDay": false,
+   "expectedOutcome": "Explains index/transaction trade-offs and reads basic query plans",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d36-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "B-tree indexes, EXPLAIN ANALYZE, composite indexes, ACID, transactions and isolation levels, deadlocks overview, window functions (ROW_NUMBER, RANK, SUM OVER), UPSERT",
+     "minutes": 30,
+     "area": "SQL & PostgreSQL",
+     "isStretch": false
+    },
+    {
+     "id": "d36-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Seed 100k rows and compare query plans with/without indexes; write a transaction for transferring task ownership; 5 window-function queries",
+     "minutes": 20,
+     "area": "SQL & PostgreSQL",
+     "isStretch": false
+    },
+    {
+     "id": "d36-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Add useful indexes to the TaskFlow schema (tasks by project/status/assignee)",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d36-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Graphs: Number of Islands, Max Area of Island",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d36-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'PostgreSQL III' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "SQL & PostgreSQL",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 37,
+   "date": "2026-12-22",
+   "weekday": "Tuesday",
+   "weekNumber": 6,
+   "plannedHours": 2,
+   "topic": "Weekly Build: TaskFlow API on PostgreSQL",
+   "area": "SQL & PostgreSQL",
+   "isStretchDay": false,
+   "expectedOutcome": "Persistent Postgres-backed API with migrations",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d37-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "pg driver and connection pooling, parameterized queries (SQL injection), migrations (node-pg-migrate or Prisma Migrate), repository implementation, env-based config",
+     "minutes": 30,
+     "area": "SQL & PostgreSQL",
+     "isStretch": false
+    },
+    {
+     "id": "d37-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Replace in-memory repositories with Postgres repositories; add migrate and seed npm scripts",
+     "minutes": 20,
+     "area": "SQL & PostgreSQL",
+     "isStretch": false
+    },
+    {
+     "id": "d37-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "TaskFlow tasks/projects endpoints now persist to PostgreSQL",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d37-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Graphs: Clone Graph, Pacific Atlantic Water Flow",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d37-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Weekly Build' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "SQL & PostgreSQL",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 38,
+   "date": "2026-12-23",
+   "weekday": "Wednesday",
+   "weekNumber": 6,
+   "plannedHours": 2,
+   "topic": "FSD: Caching & Pagination Strategies",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Designs cache and pagination layers and explains invalidation",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d38-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Concepts: HTTP caching (Cache-Control, ETag), stale-while-revalidate, service workers, client caches (RTK Query/React Query), CDN, offset vs cursor pagination, infinite scroll, virtualization. Concept session + practice: Design the caching and pagination strategy for a social feed and a product catalog; list invalidation rules",
+     "minutes": 70,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d38-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Graphs: Rotting Oranges (multi-source BFS), Walls and Gates",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d38-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Rewrite the checklist for this topic and make 5 flashcards (20 min); skim last Sunday's design diagram",
+     "minutes": 20,
+     "area": "Frontend System Design",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 39,
+   "date": "2026-12-24",
+   "weekday": "Thursday",
+   "weekNumber": 6,
+   "plannedHours": 2,
+   "topic": "Authentication: Passwords, JWT Access & Refresh Tokens",
+   "area": "Auth & Security",
+   "isStretchDay": false,
+   "expectedOutcome": "Working, secure JWT auth flow with refresh-token rotation",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d39-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Authentication vs authorization, sessions vs JWT, httpOnly/Secure/SameSite cookies, bcrypt/argon2 hashing, JWT claims, access vs refresh tokens, rotation and revocation, logout, secret management",
+     "minutes": 30,
+     "area": "Auth & Security",
+     "isStretch": false
+    },
+    {
+     "id": "d39-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build register/login endpoints with hashed passwords, then the access + refresh flow with rotation and /auth/refresh; test with Postman",
+     "minutes": 20,
+     "area": "Auth & Security",
+     "isStretch": false
+    },
+    {
+     "id": "d39-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Add /auth/register, /auth/login and /auth/refresh to TaskFlow (store hashed refresh tokens in the DB)",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d39-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Graphs: Course Schedule I (cycle detection), Course Schedule II (topological sort)",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d39-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Authentication' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Auth & Security",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 40,
+   "date": "2026-12-25",
+   "weekday": "Friday",
+   "weekNumber": 6,
+   "plannedHours": 2,
+   "topic": "Weekly Build: Authorization & API Security Hardening",
+   "area": "Auth & Security",
+   "isStretchDay": false,
+   "expectedOutcome": "Protected endpoints and a security checklist you can discuss in interviews",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d40-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "RBAC vs ABAC, role/ownership middleware, IDOR, least privilege, input validation, SQL injection, XSS, CSRF, CORS, helmet, rate limiting, secrets, npm audit",
+     "minutes": 20,
+     "area": "Auth & Security",
+     "isStretch": false
+    },
+    {
+     "id": "d40-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Write requireAuth/requireRole middleware and ownership checks; add rate limiting on auth routes; run an OWASP checklist and npm audit",
+     "minutes": 20,
+     "area": "Auth & Security",
+     "isStretch": false
+    },
+    {
+     "id": "d40-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Add roles (admin/member) and project membership checks to TaskFlow; document security measures in the README",
+     "minutes": 30,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d40-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Graphs: Number of Connected Components, Graph Valid Tree (union-find)",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d40-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "20-min weekly quiz on PostgreSQL, authentication and security; fix every wrong answer and update the error log",
+     "minutes": 20,
+     "area": "Auth & Security",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 41,
+   "date": "2026-12-26",
+   "weekday": "Saturday",
+   "weekNumber": 6,
+   "plannedHours": 5,
+   "topic": "Frontend Authentication Flow",
+   "area": "Auth & Security",
+   "isStretchDay": false,
+   "expectedOutcome": "End-to-end authentication working between client and server",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d41-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Protected routes, token storage trade-offs, Axios interceptors, RTK Query baseQuery with reauth, silent refresh, logout across tabs, [STRETCH] OAuth2/OIDC Google login overview",
+     "minutes": 60,
+     "area": "Auth & Security",
+     "isStretch": true
+    },
+    {
+     "id": "d41-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build login/register pages with React Hook Form + Zod; add an Axios interceptor and an RTK Query baseQuery that retries after refresh",
+     "minutes": 40,
+     "area": "Auth & Security",
+     "isStretch": false
+    },
+    {
+     "id": "d41-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Create the TaskFlow client auth module: login, register, protected route wrapper, session persistence",
+     "minutes": 110,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d41-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Graphs: Word Ladder, Redundant Connection, Network Delay Time (Dijkstra intro)",
+     "minutes": 45,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d41-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Spaced revision: re-do 2 tasks from the previous two weeks; update flashcards and the error log",
+     "minutes": 45,
+     "area": "Auth & Security",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 42,
+   "date": "2026-12-27",
+   "weekday": "Sunday",
+   "weekNumber": 6,
+   "plannedHours": 5,
+   "topic": "FSD Practice: Analytics Dashboard",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Designs a dashboard with isolated widget failures and sensible refresh policies",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d42-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Full design walkthrough (requirements, architecture, data/API, optimizations): Analytics Dashboard. Cover: Widget layout system, data fetching/polling, chart rendering, caching/refresh policies, per-widget loading/error, filters/date range, performance with large data, export",
+     "minutes": 120,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d42-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a dashboard with 3 widgets (Recharts), polling refresh and per-widget error states",
+     "minutes": 30,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d42-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Implement GET /projects/:id/summary with SQL aggregates for the TaskFlow dashboard",
+     "minutes": 30,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d42-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Graphs: Timed set: graph problems in 45 min",
+     "minutes": 60,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d42-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Weekly review + 20 SQL and auth interview questions (joins, indexes, transactions, JWT) answered aloud",
+     "minutes": 60,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 43,
+   "date": "2026-12-28",
+   "weekday": "Monday",
+   "weekNumber": 7,
+   "plannedHours": 2,
+   "topic": "TaskFlow Client Foundation: Architecture & Routing",
+   "area": "TaskFlow Project",
+   "isStretchDay": false,
+   "expectedOutcome": "Production-style frontend foundation",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d43-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Vite + React + TS setup, feature-based folder structure, React Router (nested/protected routes), UI library theme (Ant Design or MUI), RTK store wiring, env config, path aliases",
+     "minutes": 30,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d43-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Scaffold layout (header/sidebar), route tree, theme and store; set up ESLint/Prettier/Husky",
+     "minutes": 20,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d43-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Scaffold the TaskFlow client with routing, layout and store",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d43-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Heaps & Backtracking: Kth Largest Element in a Stream, Last Stone Weight",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d43-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'TaskFlow Client Foundation' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 44,
+   "date": "2026-12-29",
+   "weekday": "Tuesday",
+   "weekNumber": 7,
+   "plannedHours": 2,
+   "topic": "TaskFlow Tasks List: Server State, Filters & Pagination",
+   "area": "TaskFlow Project",
+   "isStretchDay": false,
+   "expectedOutcome": "Tasks list page with real pagination and filters",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d44-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "RTK Query list endpoints, URL-synced filters, debounced search, pagination UI, loading/empty/error states, skeletons",
+     "minutes": 30,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d44-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a tasks list with debounced search, status/assignee filters and server pagination; keep filters in the URL",
+     "minutes": 20,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d44-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Implement the TaskFlow tasks list page against the real API",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d44-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Heaps & Backtracking: K Closest Points to Origin, Kth Largest Element in an Array",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d44-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'TaskFlow Tasks List' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 45,
+   "date": "2026-12-30",
+   "weekday": "Wednesday",
+   "weekNumber": 7,
+   "plannedHours": 2,
+   "topic": "FSD: Performance Optimization & Core Web Vitals",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Systematically diagnoses and improves frontend performance",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d45-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Concepts: LCP/INP/CLS, bundle splitting, tree-shaking, lazy loading, image optimization (WebP/AVIF, srcset), preloading, memoization, virtualization, CDN, performance budgets. Concept session + practice: Create a performance audit plan for a slow e-commerce page: metrics, hypotheses, fixes, measurement",
+     "minutes": 70,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d45-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Heaps & Backtracking: Subsets, Combination Sum",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d45-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Rewrite the checklist for this topic and make 5 flashcards (20 min); skim last Sunday's design diagram",
+     "minutes": 20,
+     "area": "Frontend System Design",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 46,
+   "date": "2026-12-31",
+   "weekday": "Thursday",
+   "weekNumber": 7,
+   "plannedHours": 2,
+   "topic": "TaskFlow Forms: Create/Edit with Validation & Optimistic UI",
+   "area": "TaskFlow Project",
+   "isStretchDay": false,
+   "expectedOutcome": "Complete task CRUD from the UI",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d46-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "React Hook Form + Zod, controlled vs uncontrolled inputs, field-level errors, optimistic updates and rollback, toast feedback, modal/drawer forms",
+     "minutes": 30,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d46-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Create/edit task forms with validation and optimistic updates; handle server validation errors",
+     "minutes": 20,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d46-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Add create/edit/delete task flows to TaskFlow",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d46-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Heaps & Backtracking: Permutations, Word Search",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d46-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'TaskFlow Forms' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 47,
+   "date": "2027-01-01",
+   "weekday": "Friday",
+   "weekNumber": 7,
+   "plannedHours": 2,
+   "topic": "Weekly Build: TaskFlow Projects & Board View",
+   "area": "TaskFlow Project",
+   "isStretchDay": false,
+   "expectedOutcome": "Projects and board view functioning",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d47-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Project switching, summary cards, status board layout, [STRETCH] drag-and-drop with dnd-kit, memoization for board columns",
+     "minutes": 20,
+     "area": "TaskFlow Project",
+     "isStretch": true
+    },
+    {
+     "id": "d47-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Implement a project dashboard with counts per status and a column board (drag-and-drop optional)",
+     "minutes": 20,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d47-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Integrate projects UI and board view; ensure state flows through the RTK Query cache",
+     "minutes": 30,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d47-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Heaps & Backtracking: Generate Parentheses, Letter Combinations of a Phone Number",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d47-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "20-min weekly quiz on TaskFlow frontend architecture; fix every wrong answer and update the error log",
+     "minutes": 20,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 48,
+   "date": "2027-01-02",
+   "weekday": "Saturday",
+   "weekNumber": 7,
+   "plannedHours": 5,
+   "topic": "TaskFlow Polish: Accessibility, Performance & Error Handling",
+   "area": "TaskFlow Project",
+   "isStretchDay": false,
+   "expectedOutcome": "Accessible, performant client with documented improvements",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d48-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Semantic HTML, labels, focus management, keyboard navigation, color contrast, error boundaries, lazy routes, bundle analysis, Lighthouse audit",
+     "minutes": 60,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d48-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Fix accessibility issues found with axe/Lighthouse; add an error boundary and lazy-loaded routes; analyze the bundle",
+     "minutes": 40,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d48-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Run Lighthouse + axe on TaskFlow and fix top issues; add empty/error states",
+     "minutes": 110,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d48-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Heaps & Backtracking: Find Median from Data Stream, Implement Trie",
+     "minutes": 45,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d48-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Spaced revision: re-do 2 tasks from the previous two weeks; update flashcards and the error log",
+     "minutes": 45,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 49,
+   "date": "2027-01-03",
+   "weekday": "Sunday",
+   "weekNumber": 7,
+   "plannedHours": 5,
+   "topic": "FSD Practice: File Upload",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Designs robust uploads including progress, retry and security",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d49-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Full design walkthrough (requirements, architecture, data/API, optimizations): File Upload. Cover: Drag-and-drop, validation, previews, progress, cancel/retry, chunked and resumable uploads, presigned URLs, security (type/size), accessibility",
+     "minutes": 120,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d49-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build an uploader with drag-drop, progress bars (Axios onUploadProgress), validation and cancel",
+     "minutes": 30,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d49-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Add an avatar upload endpoint to TaskFlow (size/type validation, storage abstraction)",
+     "minutes": 30,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d49-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Heaps & Backtracking: Timed set: heap + backtracking problems in 45 min",
+     "minutes": 60,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d49-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Weekly review + practice explaining the TaskFlow architecture in 3 minutes",
+     "minutes": 60,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 50,
+   "date": "2027-01-04",
+   "weekday": "Monday",
+   "weekNumber": 8,
+   "plannedHours": 2,
+   "topic": "Jest & React Testing Library Fundamentals",
+   "area": "Testing",
+   "isStretchDay": false,
+   "expectedOutcome": "Writes behavior-focused unit and component tests",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d50-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Jest matchers/mocks/spies/fake timers/async tests/coverage; RTL philosophy, queries (role/label/text), user-event, findBy/waitFor, testing custom hooks",
+     "minutes": 30,
+     "area": "Testing",
+     "isStretch": false
+    },
+    {
+     "id": "d50-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Write Jest tests for your JS utility library (debounce with fake timers, memoize); then RTL tests for the Autocomplete, Tabs and form components",
+     "minutes": 20,
+     "area": "Testing",
+     "isStretch": false
+    },
+    {
+     "id": "d50-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Add Jest config, server unit tests and RTL tests for the TaskFlow task form",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d50-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Dynamic Programming: Climbing Stairs, House Robber",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d50-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Jest & React Testing Library Fundamentals' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Testing",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 51,
+   "date": "2027-01-05",
+   "weekday": "Tuesday",
+   "weekNumber": 8,
+   "plannedHours": 2,
+   "topic": "Testing Redux & RTK Query with MSW",
+   "area": "Testing",
+   "isStretchDay": false,
+   "expectedOutcome": "Integration tests for data-driven UI",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d51-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Mock Service Worker setup, testing connected components, store test utilities, loading/error/optimistic states, snapshot trade-offs",
+     "minutes": 30,
+     "area": "Testing",
+     "isStretch": false
+    },
+    {
+     "id": "d51-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Set up MSW and test RTK Query success, error and optimistic flows",
+     "minutes": 20,
+     "area": "Testing",
+     "isStretch": false
+    },
+    {
+     "id": "d51-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Cover TaskFlow list and create flows with MSW-backed integration tests",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d51-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Dynamic Programming: House Robber II, Min Cost Climbing Stairs",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d51-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Testing Redux & RTK Query with MSW' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Testing",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 52,
+   "date": "2027-01-06",
+   "weekday": "Wednesday",
+   "weekNumber": 8,
+   "plannedHours": 2,
+   "topic": "FSD: Accessibility (WCAG) + Frontend Testing Strategy",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Builds accessibility and a risk-based testing strategy into any design",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d52-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Concepts: Part 1 (35m): WCAG 2.2, semantic HTML, ARIA, focus management, keyboard nav, contrast, live regions. Part 2 (35m): testing pyramid/trophy, unit vs integration vs e2e, visual regression, MSW, CI quality gates. Concept session + practice: Write the a11y spec (roles, keyboard map, focus rules) for Autocomplete; write a test plan for a checkout flow with CI gates",
+     "minutes": 70,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d52-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Dynamic Programming: Coin Change, Longest Increasing Subsequence",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d52-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Rewrite the checklist for this topic and make 5 flashcards (20 min); skim last Sunday's design diagram",
+     "minutes": 20,
+     "area": "Frontend System Design",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 53,
+   "date": "2027-01-07",
+   "weekday": "Thursday",
+   "weekNumber": 8,
+   "plannedHours": 2,
+   "topic": "Weekly Build: Backend Tests with Supertest",
+   "area": "Testing",
+   "isStretchDay": false,
+   "expectedOutcome": "Reliable backend test suite for critical paths",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d53-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Supertest, test database setup/teardown, factories/fixtures, auth in tests, testing validation and error paths, mocking external services",
+     "minutes": 30,
+     "area": "Testing",
+     "isStretch": false
+    },
+    {
+     "id": "d53-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Write API tests for auth, tasks CRUD and authorization failures",
+     "minutes": 20,
+     "area": "Testing",
+     "isStretch": false
+    },
+    {
+     "id": "d53-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Add a Supertest suite and test DB (Docker Compose) to the TaskFlow server",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d53-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Dynamic Programming: Longest Palindromic Substring, Decode Ways",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d53-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Weekly Build' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Testing",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 54,
+   "date": "2027-01-08",
+   "weekday": "Friday",
+   "weekNumber": 8,
+   "plannedHours": 2,
+   "topic": "Test Strategy, Coverage & CI-Ready Scripts",
+   "area": "Testing",
+   "isStretchDay": false,
+   "expectedOutcome": "A tested project and a clear testing story for interviews",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d54-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Test pyramid, what not to test, coverage thresholds, flaky tests, npm scripts for CI, [STRETCH] Playwright e2e smoke test (login to create task)",
+     "minutes": 20,
+     "area": "Testing",
+     "isStretch": true
+    },
+    {
+     "id": "d54-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Reach roughly 70% coverage on critical TaskFlow paths; [STRETCH] write one Playwright smoke test",
+     "minutes": 20,
+     "area": "Testing",
+     "isStretch": true
+    },
+    {
+     "id": "d54-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Add test scripts and coverage report; document the testing approach in the README",
+     "minutes": 30,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d54-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Dynamic Programming: Word Break, Maximum Product Subarray",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d54-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "20-min weekly quiz on testing and Docker; fix every wrong answer and update the error log",
+     "minutes": 20,
+     "area": "Testing",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 55,
+   "date": "2027-01-09",
+   "weekday": "Saturday",
+   "weekNumber": 8,
+   "plannedHours": 5,
+   "topic": "Git Workflows, Docker & Compose",
+   "area": "Git, Docker, CI/CD & Deployment",
+   "isStretchDay": false,
+   "expectedOutcome": "TaskFlow runs via docker compose with a professional Git workflow",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d55-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Branching strategies, rebase vs merge, conflict resolution, conventional commits; Docker images/containers/volumes, multi-stage Dockerfiles, .dockerignore, docker compose, healthchecks, service networking",
+     "minutes": 60,
+     "area": "Git, Docker, CI/CD & Deployment",
+     "isStretch": false
+    },
+    {
+     "id": "d55-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Practice rebase/conflict resolution in a sandbox repo; write Dockerfiles for API and client (nginx) and a compose file with Postgres",
+     "minutes": 40,
+     "area": "Git, Docker, CI/CD & Deployment",
+     "isStretch": false
+    },
+    {
+     "id": "d55-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Dockerize TaskFlow (server, client, Postgres) so one command runs everything; adopt a feature-branch + PR workflow",
+     "minutes": 110,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d55-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Dynamic Programming: Unique Paths, Longest Common Subsequence, Partition Equal Subset Sum",
+     "minutes": 45,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d55-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Spaced revision: re-do 2 tasks from the previous two weeks; update flashcards and the error log",
+     "minutes": 45,
+     "area": "Git, Docker, CI/CD & Deployment",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 56,
+   "date": "2027-01-10",
+   "weekday": "Sunday",
+   "weekNumber": 8,
+   "plannedHours": 5,
+   "topic": "FSD Practice: Multi-Step Form",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Designs wizard flows with validation and persistence",
+   "milestone": "Mock interview #3",
+   "activities": [
+    {
+     "id": "d56-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Full design walkthrough (requirements, architecture, data/API, optimizations): Multi-Step Form. Cover: Wizard state model, per-step validation, draft persistence, back/next navigation, conditional steps, error summary, accessibility, funnel analytics",
+     "minutes": 120,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d56-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a 4-step wizard with React Hook Form + Zod and sessionStorage persistence",
+     "minutes": 30,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d56-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Add an onboarding wizard to TaskFlow (profile, project, invite)",
+     "minutes": 30,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d56-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Dynamic Programming: Timed set: DP problems in 45 min; write state/transition notes",
+     "minutes": 60,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d56-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Mock interview #3 (React + testing, with a 20-min machine-coding task) + weekly review",
+     "minutes": 60,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 57,
+   "date": "2027-01-11",
+   "weekday": "Monday",
+   "weekNumber": 9,
+   "plannedHours": 2,
+   "topic": "Next.js I: App Router Fundamentals",
+   "area": "Next.js",
+   "isStretchDay": false,
+   "expectedOutcome": "Understands the Next.js mental model and server/client components",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d57-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "App Router file conventions, layouts, nested routes, server vs client components, use client boundary, Link/navigation, dynamic routes, TypeScript setup",
+     "minutes": 30,
+     "area": "Next.js",
+     "isStretch": false
+    },
+    {
+     "id": "d57-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Create a Next.js TS app with a layout, nested routes and dynamic product pages",
+     "minutes": 20,
+     "area": "Next.js",
+     "isStretch": false
+    },
+    {
+     "id": "d57-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Create a small Next.js app (taskflow-public) for public project share pages",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d57-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Greedy, Intervals & Prefix Sums: Maximum Subarray (Kadane), Jump Game",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d57-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Next.js I' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Next.js",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 58,
+   "date": "2027-01-12",
+   "weekday": "Tuesday",
+   "weekNumber": 9,
+   "plannedHours": 2,
+   "topic": "Next.js II: Data Fetching, Caching & Rendering Modes",
+   "area": "Next.js",
+   "isStretchDay": false,
+   "expectedOutcome": "Chooses the right rendering strategy per page and justifies it",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d58-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Server-side fetching, SSG vs SSR vs ISR (revalidate), dynamic rendering, streaming with Suspense, loading.tsx/error.tsx, cache tags and revalidation",
+     "minutes": 30,
+     "area": "Next.js",
+     "isStretch": false
+    },
+    {
+     "id": "d58-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a product list (SSG/ISR) and a product detail page (SSR) with loading/error states; compare behavior in the Network tab",
+     "minutes": 20,
+     "area": "Next.js",
+     "isStretch": false
+    },
+    {
+     "id": "d58-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Fetch public project data from the TaskFlow API in Next with revalidation",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d58-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Greedy, Intervals & Prefix Sums: Jump Game II, Gas Station",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d58-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Next.js II' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Next.js",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 59,
+   "date": "2027-01-13",
+   "weekday": "Wednesday",
+   "weekNumber": 9,
+   "plannedHours": 2,
+   "topic": "FSD: CSR vs SSR vs SSG vs ISR & Streaming",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Chooses and defends rendering strategies per use case",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d59-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Concepts: Rendering strategies, hydration/partial hydration, islands, SEO, TTFB/LCP trade-offs, edge rendering, caching per strategy. Concept session + practice: Choose a rendering strategy for each page of an e-commerce site (home, PLP, PDP, cart, account) and justify",
+     "minutes": 70,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d59-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Greedy, Intervals & Prefix Sums: Insert Interval, Merge Intervals",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d59-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Rewrite the checklist for this topic and make 5 flashcards (20 min); skim last Sunday's design diagram",
+     "minutes": 20,
+     "area": "Frontend System Design",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 60,
+   "date": "2027-01-14",
+   "weekday": "Thursday",
+   "weekNumber": 9,
+   "plannedHours": 2,
+   "topic": "CI/CD with GitHub Actions (and Jenkins Mapping)",
+   "area": "Git, Docker, CI/CD & Deployment",
+   "isStretchDay": false,
+   "expectedOutcome": "Automated pipeline running on every PR",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d60-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "CI pipeline stages: lint, typecheck, test, build, docker build, deploy; secrets, caching, branch protection; map concepts to your Jenkins experience",
+     "minutes": 30,
+     "area": "Git, Docker, CI/CD & Deployment",
+     "isStretch": false
+    },
+    {
+     "id": "d60-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Write GitHub Actions workflows for client and server (lint + test + build) with dependency caching",
+     "minutes": 20,
+     "area": "Git, Docker, CI/CD & Deployment",
+     "isStretch": false
+    },
+    {
+     "id": "d60-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Add CI to TaskFlow with status badge and required checks",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d60-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Greedy, Intervals & Prefix Sums: Non-overlapping Intervals, Meeting Rooms",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d60-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'CI/CD with GitHub Actions (and Jenkins Mapping)' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Git, Docker, CI/CD & Deployment",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 61,
+   "date": "2027-01-15",
+   "weekday": "Friday",
+   "weekNumber": 9,
+   "plannedHours": 2,
+   "topic": "Weekly Build: Deploy TaskFlow Live",
+   "area": "Git, Docker, CI/CD & Deployment",
+   "isStretchDay": false,
+   "expectedOutcome": "A live deployed full-stack project",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d61-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Environment configs, managed PostgreSQL (Neon/Supabase), API on Render/Railway, client on Vercel/Netlify, CORS and cookies across domains, migrations in deploy, rollbacks",
+     "minutes": 20,
+     "area": "Git, Docker, CI/CD & Deployment",
+     "isStretch": false
+    },
+    {
+     "id": "d61-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Deploy database, API and client; verify auth cookies work across domains; smoke test production",
+     "minutes": 20,
+     "area": "Git, Docker, CI/CD & Deployment",
+     "isStretch": false
+    },
+    {
+     "id": "d61-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Add the TaskFlow live URL to the README and resume",
+     "minutes": 30,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d61-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Greedy, Intervals & Prefix Sums: Range Sum Query, Subarray Sum Equals K (redo)",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d61-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "20-min weekly quiz on Next.js, CI/CD and deployment; fix every wrong answer and update the error log",
+     "minutes": 20,
+     "area": "Git, Docker, CI/CD & Deployment",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 62,
+   "date": "2027-01-16",
+   "weekday": "Saturday",
+   "weekNumber": 9,
+   "plannedHours": 5,
+   "topic": "Next.js III: Route Handlers, SEO, Server Actions & Vercel Deploy",
+   "area": "Next.js",
+   "isStretchDay": false,
+   "expectedOutcome": "Deployed Next.js app; explains its trade-offs with a real example",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d62-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Route handlers, middleware (auth redirect), metadata/SEO, next/image and next/font, Server Actions with forms, Core Web Vitals in Next, deploying to Vercel, when Next.js is not needed",
+     "minutes": 60,
+     "area": "Next.js",
+     "isStretch": false
+    },
+    {
+     "id": "d62-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Add a route handler, metadata/Open Graph tags and a Server Action feedback form; deploy to Vercel and run Lighthouse",
+     "minutes": 40,
+     "area": "Next.js",
+     "isStretch": false
+    },
+    {
+     "id": "d62-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Connect the deployed Next app to the TaskFlow API (CORS + env config); add a README note: why Next here vs a Vite SPA",
+     "minutes": 110,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d62-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Greedy, Intervals & Prefix Sums: Hand of Straights, Partition Labels, Merge Triplets",
+     "minutes": 45,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d62-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Spaced revision: re-do 2 tasks from the previous two weeks; update flashcards and the error log",
+     "minutes": 45,
+     "area": "Next.js",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 63,
+   "date": "2027-01-17",
+   "weekday": "Sunday",
+   "weekNumber": 9,
+   "plannedHours": 5,
+   "topic": "FSD Practice: Kanban Board",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Designs a drag-and-drop board with optimistic updates and rollback",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d63-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Full design walkthrough (requirements, architecture, data/API, optimizations): Kanban Board. Cover: Drag-and-drop architecture, ordering strategy (fractional index), optimistic updates and rollback, column virtualization, keyboard-accessible DnD, real-time collaboration overview",
+     "minutes": 120,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d63-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a Kanban board with dnd-kit, optimistic move and rollback on failure",
+     "minutes": 30,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d63-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Add a PATCH /tasks/:id/position endpoint and wire it into the TaskFlow board",
+     "minutes": 30,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d63-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Greedy, Intervals & Prefix Sums: Timed set: greedy/interval problems in 45 min",
+     "minutes": 60,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d63-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Weekly review + Next.js rendering-strategy Q&A (SSR/SSG/ISR) answered aloud",
+     "minutes": 60,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 64,
+   "date": "2027-01-18",
+   "weekday": "Monday",
+   "weekNumber": 10,
+   "plannedHours": 2,
+   "topic": "GraphQL I: Fundamentals & Schema Design",
+   "area": "GraphQL",
+   "isStretchDay": false,
+   "expectedOutcome": "Understands the GraphQL schema/query model and its trade-offs vs REST",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d64-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "GraphQL vs REST, SDL, types/queries/mutations/subscriptions, resolvers, variables, fragments, introspection, errors",
+     "minutes": 40,
+     "area": "GraphQL",
+     "isStretch": false
+    },
+    {
+     "id": "d64-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Explore a public GraphQL API (e.g., Countries) in a playground; write 10 queries with variables and fragments",
+     "minutes": 45,
+     "area": "GraphQL",
+     "isStretch": false
+    },
+    {
+     "id": "d64-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mixed Review & Bit Manipulation: Re-solve 3 weak array/string problems from weeks 1-3",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d64-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'GraphQL I' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "GraphQL",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 65,
+   "date": "2027-01-19",
+   "weekday": "Tuesday",
+   "weekNumber": 10,
+   "plannedHours": 2,
+   "topic": "Apollo Client: Queries, Mutations & Cache",
+   "area": "GraphQL",
+   "isStretchDay": false,
+   "expectedOutcome": "Uses Apollo Client with typed operations and cache awareness",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d65-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "ApolloClient setup, useQuery/useMutation/useLazyQuery, normalized cache, fetch policies, fetchMore pagination, optimistic UI, error handling, codegen with TypeScript",
+     "minutes": 40,
+     "area": "GraphQL",
+     "isStretch": false
+    },
+    {
+     "id": "d65-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a small React + TS app using Apollo Client with pagination and an optimistic mutation",
+     "minutes": 45,
+     "area": "GraphQL",
+     "isStretch": false
+    },
+    {
+     "id": "d65-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mixed Review & Bit Manipulation: Re-solve 3 weak linked-list/tree problems",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d65-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Apollo Client' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "GraphQL",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 66,
+   "date": "2027-01-20",
+   "weekday": "Wednesday",
+   "weekNumber": 10,
+   "plannedHours": 2,
+   "topic": "FSD: Frontend Security + Microfrontends & Scalable Architecture",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Identifies frontend vulnerabilities and reasons about architecture for large teams",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d66-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Concepts: Part 1 (35m): XSS, CSRF, CORS, CSP, clickjacking, token storage, supply-chain risks. Part 2 (35m): monorepo vs polyrepo, microfrontends (module federation), design systems, feature flags, i18n, error monitoring, team ownership. Concept session + practice: Threat-model a login + comments feature; sketch how a large dashboard owned by 5 teams could be split into microfrontends",
+     "minutes": 70,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d66-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mixed Review & Bit Manipulation: Re-solve 3 weak graph/backtracking problems",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d66-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Rewrite the checklist for this topic and make 5 flashcards (20 min); skim last Sunday's design diagram",
+     "minutes": 20,
+     "area": "Frontend System Design",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 67,
+   "date": "2027-01-21",
+   "weekday": "Thursday",
+   "weekNumber": 10,
+   "plannedHours": 2,
+   "topic": "Interview Prep I: JavaScript & React Rapid-Fire + Live Coding",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Fluent answers on JS/React questions and clean coding under time pressure",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d67-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Closures, this, prototypes, event loop, promises, hoisting, polyfills, output-based questions; hooks internals, reconciliation, keys, state batching, effect pitfalls, context vs Redux, performance",
+     "minutes": 40,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d67-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Timed: implement 4 polyfills/utilities in 30 min (Promise.all, bind, debounce, curry); then a 45-min live build of a Search app with custom hooks and debounce",
+     "minutes": 45,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d67-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mixed Review & Bit Manipulation: Re-solve 2 weak DP problems",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d67-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Interview Prep I' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 68,
+   "date": "2027-01-22",
+   "weekday": "Friday",
+   "weekNumber": 10,
+   "plannedHours": 2,
+   "topic": "Interview Prep II: TypeScript, RTK Query, Node, SQL & Auth Q&A",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Answers TypeScript, RTK, backend and SQL questions fluently",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d68-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Generics, utility types, narrowing, RTK Query caching/invalidation, Node event loop, middleware, REST design, JWT/refresh flows, indexes, joins, transactions, N+1",
+     "minutes": 20,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d68-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Solve 6 TS type challenges, explain the TaskFlow backend flow (request, middleware, service, DB) aloud and write 5 SQL queries from memory",
+     "minutes": 50,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d68-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mixed Review & Bit Manipulation: Bit manipulation: Single Number, Number of 1 Bits, Reverse Bits",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d68-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "20-min weekly quiz on GraphQL and interview Q&A themes; fix every wrong answer and update the error log",
+     "minutes": 20,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 69,
+   "date": "2027-01-23",
+   "weekday": "Saturday",
+   "weekNumber": 10,
+   "plannedHours": 5,
+   "topic": "Machine Coding Round Practice + Project Polish",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Completes a machine-coding task end to end in time",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d69-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Machine coding approach: requirements, component breakdown, state, styling, edge cases, accessibility; time-boxing 60-90 minutes",
+     "minutes": 60,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d69-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Timed 90-min machine coding: build Autocomplete or Star Rating + Modal from scratch with keyboard accessibility",
+     "minutes": 40,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d69-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Final polish on TaskFlow: fix bugs, record a 3-minute demo, update README with measured results",
+     "minutes": 110,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d69-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mixed Review & Bit Manipulation: Timed: 2 Medium problems in 45 min; log failures in the error log",
+     "minutes": 45,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d69-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Spaced revision: re-do 2 tasks from the previous two weeks; update flashcards and the error log",
+     "minutes": 45,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 70,
+   "date": "2027-01-24",
+   "weekday": "Sunday",
+   "weekNumber": 10,
+   "plannedHours": 5,
+   "topic": "FSD Practice: Mock FSD #1: Social News Feed",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "First timed mock completed with rubric scores and an improvement list",
+   "milestone": "FSD Practice: Mock FSD #1: Social News Feed",
+   "activities": [
+    {
+     "id": "d70-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Full design walkthrough (requirements, architecture, data/API, optimizations): Mock FSD #1: Social News Feed. Cover: Timed 45-min mock: feed architecture, post composer, optimistic updates, real-time updates, pagination, caching, accessibility, performance; then a 15-min rubric self-review",
+     "minutes": 120,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d70-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Implement the post composer + feed list core in 60 min",
+     "minutes": 60,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d70-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mixed Review & Bit Manipulation: Timed: 2 Medium + 1 Easy in 60 min; review error log",
+     "minutes": 60,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d70-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Mock interview #4 (full-stack + deployment, 45 min) + weekly review (15m)",
+     "minutes": 60,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 71,
+   "date": "2027-01-25",
+   "weekday": "Monday",
+   "weekNumber": 11,
+   "plannedHours": 2,
+   "topic": "Machine Coding I: Reusable UI Components",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Reusable accessible components built quickly",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d71-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Accordion, Tabs, Modal, Dropdown, Star Rating, Tooltip, Toast; keyboard handling, ARIA roles, focus trap, controlled/uncontrolled APIs",
+     "minutes": 40,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d71-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build Accordion + Modal with focus trap and keyboard support in 75 min",
+     "minutes": 45,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d71-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mock DSA Rounds: 1 Medium timed (25 min) from your weakest pattern; verbalize approach",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d71-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Machine Coding I' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 72,
+   "date": "2027-01-26",
+   "weekday": "Tuesday",
+   "weekNumber": 11,
+   "plannedHours": 2,
+   "topic": "Machine Coding II: Data Table & Pagination",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Data table implementation ready for interviews",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d72-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Sorting, filtering, pagination, column config, memoization, virtualization, server-side vs client-side data",
+     "minutes": 40,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d72-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a sortable, filterable, paginated table with TypeScript generics in 75 min",
+     "minutes": 45,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d72-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mock DSA Rounds: 1 Medium timed: tree or graph",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d72-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Machine Coding II' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 73,
+   "date": "2027-01-27",
+   "weekday": "Wednesday",
+   "weekNumber": 11,
+   "plannedHours": 2,
+   "topic": "Basic Backend System Design (Load Balancing, Caching, Queues, Rate Limiting)",
+   "area": "Backend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Sketches a basic scalable backend and justifies each component",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d73-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Concepts: Client-server flow, DNS/CDN, load balancers, stateless services, Redis caching, SQL vs NoSQL, indexing, replication, queues and background jobs, rate limiting, idempotency, observability, back-of-envelope estimation. Concept session + practice: Design a URL shortener at a high level, then a notification service with a rate limiter; describe failure handling",
+     "minutes": 70,
+     "area": "Backend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d73-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mock DSA Rounds: 1 Medium timed: DP or greedy",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d73-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Rewrite the checklist for this topic and make 5 flashcards (20 min); skim last Sunday's design diagram",
+     "minutes": 20,
+     "area": "Backend System Design",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 74,
+   "date": "2027-01-28",
+   "weekday": "Thursday",
+   "weekNumber": 11,
+   "plannedHours": 2,
+   "topic": "Machine Coding III: Infinite Scroll, Typeahead & Debounce",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Handles async edge cases in UI coding rounds",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d74-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "IntersectionObserver, cursor pagination, race conditions, request cancellation, caching, optimistic updates, scroll restoration",
+     "minutes": 40,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d74-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build an infinite-scroll feed with search typeahead and abort handling in 75 min",
+     "minutes": 45,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d74-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mock DSA Rounds: 1 Medium timed: arrays/strings",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d74-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Machine Coding III' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 75,
+   "date": "2027-01-29",
+   "weekday": "Friday",
+   "weekNumber": 11,
+   "plannedHours": 2,
+   "topic": "Project Walkthrough & Behavioral Interview Prep",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Clear, confident project explanation and behavioral answers",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d75-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Project pitch (1-min/3-min/10-min versions), architecture decisions and trade-offs, challenges and learnings, STAR stories for conflict/failure/leadership, strengths/weaknesses",
+     "minutes": 20,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d75-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Rehearse the TaskFlow walkthrough aloud (record yourself); prepare 6 STAR stories",
+     "minutes": 50,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d75-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mock DSA Rounds: 1 Medium timed: random pick from your error log",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d75-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "20-min weekly quiz on machine coding and project explanation; fix every wrong answer and update the error log",
+     "minutes": 20,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 76,
+   "date": "2027-01-30",
+   "weekday": "Saturday",
+   "weekNumber": 11,
+   "plannedHours": 5,
+   "topic": "Full Mock Interview Day",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Full-loop simulation with a scored rubric and 3 concrete fixes",
+   "milestone": "Full Mock Interview Day",
+   "activities": [
+    {
+     "id": "d76-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Three back-to-back rounds: JS/React live coding, DSA, Frontend System Design; then self-evaluation using a rubric",
+     "minutes": 70,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d76-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Round 1: build a feature in React + TS from a prompt; Round 2: 2 DSA problems; Round 3: a new FSD problem",
+     "minutes": 130,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d76-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mock DSA Rounds: Full mock DSA round: 2 Medium in 45 min under interview conditions",
+     "minutes": 45,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d76-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Spaced revision: re-do 2 tasks from the previous two weeks; update flashcards and the error log",
+     "minutes": 55,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 77,
+   "date": "2027-01-31",
+   "weekday": "Sunday",
+   "weekNumber": 11,
+   "plannedHours": 5,
+   "topic": "FSD Practice: Mock FSD #2: E-commerce Search & Checkout",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Second mock completed with measurable improvement over Mock #1",
+   "milestone": "FSD Practice: Mock FSD #2: E-commerce Search & Checkout",
+   "activities": [
+    {
+     "id": "d77-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Full design walkthrough (requirements, architecture, data/API, optimizations): Mock FSD #2: E-commerce Search & Checkout. Cover: Timed 45-min mock: search/autocomplete, listing page, cart, multi-step checkout, payments and security, error handling, performance, rendering strategy; then a 15-min rubric review",
+     "minutes": 120,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d77-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Re-implement the weakest component from this mock (60 min)",
+     "minutes": 60,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d77-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Mock DSA Rounds: Mock DSA round: 2 Medium + 1 Easy in 60 min; compare with previous mocks",
+     "minutes": 60,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d77-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Mock interview #5 (full loop: coding + project walkthrough, 60 min)",
+     "minutes": 60,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 78,
+   "date": "2027-02-01",
+   "weekday": "Monday",
+   "weekNumber": 12,
+   "plannedHours": 2,
+   "topic": "Weak-Area Repair I",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "First weak area raised to interview-ready level",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d78-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Review diagnostics, mock-interview rubrics and your error log; select the lowest-scoring topic and rebuild it from first principles",
+     "minutes": 40,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d78-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Re-implement 3 tasks you struggled with earlier, without notes",
+     "minutes": 45,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d78-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Weak-Area Repair & Final Mock: Re-solve 2 problems from the error log (weak pattern 1)",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d78-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Weak-Area Repair I' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 79,
+   "date": "2027-02-02",
+   "weekday": "Tuesday",
+   "weekNumber": 12,
+   "plannedHours": 2,
+   "topic": "Weak-Area Repair II",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Second weak area closed",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d79-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Second lowest-scoring topic; revisit notes/flashcards; fill gaps with targeted docs and exercises",
+     "minutes": 40,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d79-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Build a focused mini-exercise on the weak topic and explain it aloud in 5 minutes",
+     "minutes": 45,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d79-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Weak-Area Repair & Final Mock: Re-solve 2 problems from the error log (weak pattern 2)",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d79-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Weak-Area Repair II' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 80,
+   "date": "2027-02-03",
+   "weekday": "Wednesday",
+   "weekNumber": 12,
+   "plannedHours": 2,
+   "topic": "FSD: Final Checklist & One-Page Cheat Sheet",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Leaves with a compact, reusable system-design playbook",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d80-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Concepts: End-to-end design template: requirements, architecture, data/API, performance, accessibility, security, testing, rollout; common follow-up questions. Concept session + practice: 30-min lightning redesign of a previously practiced problem; create a one-page cheat sheet",
+     "minutes": 70,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d80-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Weak-Area Repair & Final Mock: 1 Medium timed (25-30 min), random topic",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d80-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Rewrite the checklist for this topic and make 5 flashcards (20 min); skim last Sunday's design diagram",
+     "minutes": 20,
+     "area": "Frontend System Design",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 81,
+   "date": "2027-02-04",
+   "weekday": "Thursday",
+   "weekNumber": 12,
+   "plannedHours": 2,
+   "topic": "Final Revision Sprint: JS, React, TS, Node & SQL Cheat Sheets",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Rapid-recall sheets compiled and tested",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d81-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "One-page cheat sheets for JS, React, TS, RTK, Node/Express/SQL; common traps and one-liners",
+     "minutes": 40,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d81-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Timed sprint: 2 live-coding tasks (React component + JS utility) in 60 min",
+     "minutes": 45,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d81-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Weak-Area Repair & Final Mock: 1 Medium timed, then check the pattern cheat sheet for gaps",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d81-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Final Revision Sprint' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 82,
+   "date": "2027-02-05",
+   "weekday": "Friday",
+   "weekNumber": 12,
+   "plannedHours": 2,
+   "topic": "Interview Readiness: Resume, GitHub & Pitch Alignment",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Profiles and pitch consistent with the new skill set",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d82-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Align resume/LinkedIn/GitHub with learned skills, 60-second self-introduction, 'tell me about TaskFlow', target-role keyword mapping, questions to ask interviewers",
+     "minutes": 20,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d82-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Update project README/pinned repos; rehearse the intro and career-transition answers aloud",
+     "minutes": 50,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d82-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Weak-Area Repair & Final Mock: Review the pattern cheat sheet (no new problems); rehearse 3 templates aloud",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d82-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "20-min weekly quiz on weak areas and final readiness; fix every wrong answer and update the error log",
+     "minutes": 20,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 83,
+   "date": "2027-02-06",
+   "weekday": "Saturday",
+   "weekNumber": 12,
+   "plannedHours": 5,
+   "topic": "Final Readiness Assessment (Full Mock)",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Measured improvement vs baseline and a ranked list of remaining gaps",
+   "milestone": "Final Readiness Assessment (Full Mock)",
+   "activities": [
+    {
+     "id": "d83-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Full mock across JS/React/TS, Node/SQL, DSA and FSD; score each area against Diagnostic #1 and #2",
+     "minutes": 70,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d83-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Complete a final 2-hour machine-coding + DSA mock under real conditions",
+     "minutes": 130,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d83-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Weak-Area Repair & Final Mock: Final DSA mock: 2 Medium in 45 min",
+     "minutes": 45,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d83-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Spaced revision: re-do 2 tasks from the previous two weeks; update flashcards and the error log",
+     "minutes": 55,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 84,
+   "date": "2027-02-07",
+   "weekday": "Sunday",
+   "weekNumber": 12,
+   "plannedHours": 5,
+   "topic": "FSD Practice: Final Mock FSD #3: Unseen Problem",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Handles an unseen design problem with a structured approach",
+   "milestone": "FSD Practice: Final Mock FSD #3: Unseen Problem",
+   "activities": [
+    {
+     "id": "d84-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Full design walkthrough (requirements, architecture, data/API, optimizations): Final Mock FSD #3: Unseen Problem. Cover: Timed 45-min design on a problem you have not practiced (e.g., Spotify web player or collaborative editor); apply the one-page cheat sheet; self-score against Mock #1",
+     "minutes": 120,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d84-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Implement the riskiest part of the design as a proof of concept (60 min)",
+     "minutes": 60,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d84-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Weak-Area Repair & Final Mock: Warm-up: 1 Medium; final review of pattern cheat sheet and error log",
+     "minutes": 60,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d84-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Final readiness scorecard: redo Diagnostic #1 and #2 questions, compare scores, set next steps for stretch topics",
+     "minutes": 60,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 85,
+   "date": "2027-02-08",
+   "weekday": "Monday",
+   "weekNumber": 13,
+   "plannedHours": 2,
+   "topic": "Gap Repair from Readiness Scorecard",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Two weakest areas lifted to interview-ready level",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d85-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Review the Feb 7 scorecard; pick the 2 lowest-scoring areas and relearn them from first principles with docs and worked examples",
+     "minutes": 40,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d85-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Re-implement 2 tasks from those areas without notes; explain each aloud in 5 minutes",
+     "minutes": 45,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d85-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Final Timed Practice: 1 Medium timed (25 min) from your weakest pattern; verbalize approach",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d85-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Gap Repair from Readiness Scorecard' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 86,
+   "date": "2027-02-09",
+   "weekday": "Tuesday",
+   "weekNumber": 13,
+   "plannedHours": 2,
+   "topic": "GraphQL Server with Node: Apollo Server Basics",
+   "area": "GraphQL",
+   "isStretchDay": true,
+   "expectedOutcome": "Explains GraphQL server concerns (N+1, auth) from hands-on experience",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d86-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Apollo Server setup, resolvers over Postgres, context/auth, N+1 problem and DataLoader, schema-first vs code-first overview",
+     "minutes": 30,
+     "area": "GraphQL",
+     "isStretch": true
+    },
+    {
+     "id": "d86-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Create a read-only GraphQL endpoint exposing tasks and projects with DataLoader batching",
+     "minutes": 20,
+     "area": "GraphQL",
+     "isStretch": true
+    },
+    {
+     "id": "d86-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Add a read-only /graphql endpoint to the TaskFlow server (stretch: skip if behind schedule)",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": true
+    },
+    {
+     "id": "d86-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Final Timed Practice: 1 Medium timed from your second-weakest pattern",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d86-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain '[STRETCH] GraphQL Server with Node' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "GraphQL",
+     "isStretch": true
+    }
+   ]
+  },
+  {
+   "dayNumber": 87,
+   "date": "2027-02-10",
+   "weekday": "Wednesday",
+   "weekNumber": 13,
+   "plannedHours": 2,
+   "topic": "FSD: Notification Center & Offline-First Patterns",
+   "area": "Frontend System Design",
+   "isStretchDay": false,
+   "expectedOutcome": "Designs real-time and offline-tolerant UI features with clear fallbacks",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d87-fsd",
+     "type": "fsd",
+     "label": "System design",
+     "details": "Concepts: Toast queue and priority, SSE/WebSocket delivery, read/unread state, service workers, offline queue, accessibility live regions, rate-limiting UX. Concept session + practice: Design a notification center end to end; list failure modes and fallbacks",
+     "minutes": 70,
+     "area": "Frontend System Design",
+     "isStretch": false
+    },
+    {
+     "id": "d87-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Final Timed Practice: 1 Medium timed, random topic",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d87-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Rewrite the checklist for this topic and make 5 flashcards (20 min); skim last Sunday's design diagram",
+     "minutes": 20,
+     "area": "Frontend System Design",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 88,
+   "date": "2027-02-11",
+   "weekday": "Thursday",
+   "weekNumber": 13,
+   "plannedHours": 2,
+   "topic": "Production Readiness & Documentation",
+   "area": "Git, Docker, CI/CD & Deployment",
+   "isStretchDay": false,
+   "expectedOutcome": "A portfolio-ready project and its documentation",
+   "milestone": null,
+   "activities": [
+    {
+     "id": "d88-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Health checks, structured logging, monitoring, [STRETCH] Sentry + nginx reverse proxy/HTTPS overview, CDN/caching headers, architecture diagram, README for recruiters",
+     "minutes": 30,
+     "area": "Git, Docker, CI/CD & Deployment",
+     "isStretch": true
+    },
+    {
+     "id": "d88-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Add a health endpoint and request IDs; [STRETCH] integrate Sentry; draw the architecture diagram",
+     "minutes": 20,
+     "area": "Git, Docker, CI/CD & Deployment",
+     "isStretch": true
+    },
+    {
+     "id": "d88-project",
+     "type": "project",
+     "label": "Project task",
+     "details": "Write a polished README (features, stack, architecture, setup, trade-offs) and a 2-minute demo script",
+     "minutes": 35,
+     "area": "TaskFlow Project",
+     "isStretch": false
+    },
+    {
+     "id": "d88-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Final Timed Practice: 1 Medium timed, then review the pattern cheat sheet for gaps",
+     "minutes": 25,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d88-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "10-min active recall: re-explain 'Production Readiness & Documentation' aloud without notes; add 3 flashcards/interview questions",
+     "minutes": 10,
+     "area": "Git, Docker, CI/CD & Deployment",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 89,
+   "date": "2027-02-12",
+   "weekday": "Friday",
+   "weekNumber": 13,
+   "plannedHours": 2,
+   "topic": "Final Interview Mock: Full Loop (Coding + Project + System Design)",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Repeat-loop performance measured; remaining gaps shortlisted",
+   "milestone": "Final Interview Mock: Full Loop (Coding + Project + System Design)",
+   "activities": [
+    {
+     "id": "d89-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Full loop: 45-min machine coding, 3-min TaskFlow pitch, 45-min frontend system design mock, 2 behavioral answers; score against the Feb 7 scorecard",
+     "minutes": 20,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d89-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Round: 45-min machine-coding task from a prompt you have not seen",
+     "minutes": 50,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d89-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Final Timed Practice: Pattern cheat-sheet recall (no new problems); 1 Easy warm-up",
+     "minutes": 30,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d89-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "20-min weekly quiz on gap repair, production readiness and final mock; fix every wrong answer and update the error log",
+     "minutes": 20,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  },
+  {
+   "dayNumber": 90,
+   "date": "2027-02-13",
+   "weekday": "Saturday",
+   "weekNumber": 13,
+   "plannedHours": 5,
+   "topic": "Wrap-Up: Final Readiness Check & Next Steps",
+   "area": "Interview Prep & Mocks",
+   "isStretchDay": false,
+   "expectedOutcome": "Interview-ready, with a clear plan for what to do after day 90",
+   "milestone": "Wrap-Up: Final Readiness Check & Next Steps",
+   "activities": [
+    {
+     "id": "d90-learn",
+     "type": "learn",
+     "label": "Concepts",
+     "details": "Re-run the scorecard, finalize cheat sheets, list post-plan topics (Docker/Kubernetes basics, observability, microfrontend depth, Apollo Server), plan real interview scheduling",
+     "minutes": 70,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d90-code",
+     "type": "code",
+     "label": "Coding task",
+     "details": "Final 90-min mock: 1 machine-coding task + 1 DSA Medium under real conditions",
+     "minutes": 130,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    },
+    {
+     "id": "d90-dsa",
+     "type": "dsa",
+     "label": "DSA practice",
+     "details": "Final Timed Practice: Final DSA mock: 2 Medium in 45 min under interview conditions",
+     "minutes": 45,
+     "area": "DSA",
+     "isStretch": false
+    },
+    {
+     "id": "d90-revise",
+     "type": "revise",
+     "label": "Revision / interview practice",
+     "details": "Spaced revision: re-do 2 tasks from the previous two weeks; update flashcards and the error log",
+     "minutes": 55,
+     "area": "Interview Prep & Mocks",
+     "isStretch": false
+    }
+   ]
+  }
+ ]
+}
