@@ -1,12 +1,25 @@
 import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Layout from '@/components/Layout'
+import { ThemeProvider } from '@/components/ThemeProvider'
+import Daily from '@/pages/Daily'
+import Dashboard from '@/pages/Dashboard'
+import Syllabus from '@/pages/Syllabus'
 
 function App() {
   return (
-    <main className="placeholder">
-      <p className="eyebrow">90-day interview preparation</p>
-      <h1>RoadmapTrack</h1>
-      <p>Your roadmap progress tracker is getting ready.</p>
-    </main>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="daily" element={<Daily />} />
+            <Route path="daily/:date" element={<Daily />} />
+            <Route path="syllabus" element={<Syllabus />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }
 

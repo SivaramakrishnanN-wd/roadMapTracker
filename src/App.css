@@ -13,6 +13,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
 }
 
 * {
@@ -23,31 +25,230 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
+  background: #f5f7fb;
 }
 
-.placeholder {
-  display: grid;
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-shell {
   min-height: 100vh;
-  place-content: center;
-  padding: 2rem;
-  text-align: center;
+  padding-bottom: 0;
+  background: #f5f7fb;
+  color: #172033;
 }
 
-.placeholder h1 {
-  margin: 0.25rem 0;
+.app-header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  border-bottom: 1px solid #e8ebf2;
+  background: rgb(255 255 255 / 92%);
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #172033;
+  font-size: 1.05rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 11px;
+  background: #4263b4;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.header-center,
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.day-count {
+  color: #657189;
+  font-size: 0.88rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.desktop-nav {
+  display: flex;
+  height: 76px;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  display: inline-flex;
+  height: 42px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  border-radius: 10px;
+  color: #69758b;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 150ms ease,
+    color 150ms ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #eef2fc;
+  color: #3557a4;
+}
+
+.settings-button.ant-btn {
+  width: 40px;
+  height: 40px;
+  color: #56627a;
+}
+
+.page-content {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 56px 0 72px;
+}
+
+.page-placeholder {
+  padding: 36px;
+  border: 1px solid #e8ebf2;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgb(34 52 95 / 5%);
+}
+
+.page-placeholder h1 {
+  margin: 0 0 10px;
   color: #182b55;
-  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  letter-spacing: -0.035em;
 }
 
-.placeholder p {
-  margin: 0.5rem 0;
-  color: #5e6b82;
+.page-placeholder p {
+  margin: 0;
+  color: #68758c;
+  line-height: 1.6;
 }
 
-.placeholder .eyebrow {
-  color: #4263b4;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.mobile-nav {
+  display: none;
+}
+
+[data-theme='dark'] body,
+[data-theme='dark'] .app-shell {
+  background: #111827;
+  color: #e6eaf2;
+}
+
+[data-theme='dark'] .app-header {
+  border-bottom-color: #293345;
+  background: rgb(17 24 39 / 92%);
+}
+
+[data-theme='dark'] .brand,
+[data-theme='dark'] .page-placeholder h1 {
+  color: #edf2ff;
+}
+
+[data-theme='dark'] .day-count,
+[data-theme='dark'] .nav-link,
+[data-theme='dark'] .settings-button.ant-btn,
+[data-theme='dark'] .page-placeholder p {
+  color: #aab5c8;
+}
+
+[data-theme='dark'] .nav-link:hover,
+[data-theme='dark'] .nav-link.active {
+  background: #263552;
+  color: #c4d2ff;
+}
+
+[data-theme='dark'] .page-placeholder {
+  border-color: #293345;
+  background: #1b2535;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 12%);
+}
+
+@media (max-width: 680px) {
+  .app-shell {
+    padding-bottom: 72px;
+  }
+
+  .app-header {
+    height: 64px;
+    padding: 0 18px;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header-center {
+    display: none;
+  }
+
+  .page-content {
+    width: calc(100% - 32px);
+    padding: 28px 0 36px;
+  }
+
+  .page-placeholder {
+    padding: 26px 22px;
+    border-radius: 16px;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    z-index: 20;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    height: 68px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 6px 12px max(6px, env(safe-area-inset-bottom));
+    border-top: 1px solid #e8ebf2;
+    background: rgb(255 255 255 / 96%);
+    backdrop-filter: blur(16px);
+  }
+
+  .mobile-nav .nav-link {
+    height: 54px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    padding: 4px;
+    font-size: 0.7rem;
+  }
+
+  [data-theme='dark'] .mobile-nav {
+    border-top-color: #293345;
+    background: rgb(17 24 39 / 96%);
+  }
 }
