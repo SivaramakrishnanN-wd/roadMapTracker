@@ -8,10 +8,7 @@ import { Button, Drawer, Select, Tooltip } from 'antd'
 import type { ReactNode } from 'react'
 import { useState } from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
-import {
-  useThemePreference,
-  type ThemePreference,
-} from '@/components/ThemeContext'
+import { useProgressStore, type ThemePreference } from '@/store/progress'
 
 const navigation = [
   { to: '/', label: 'Dashboard', icon: <HomeOutlined /> },
@@ -52,7 +49,8 @@ function SettingsPanel({
   open: boolean
   onClose: () => void
 }) {
-  const { preference, setPreference } = useThemePreference()
+  const preference = useProgressStore((state) => state.settings.theme)
+  const setPreference = useProgressStore((state) => state.setTheme)
 
   return (
     <Drawer title="Settings" open={open} onClose={onClose} width={320}>

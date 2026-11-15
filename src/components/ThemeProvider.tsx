@@ -1,13 +1,13 @@
 import { ConfigProvider, theme } from 'antd'
-import { useEffect, useMemo, useState, type ReactNode } from 'react'
-import { ThemeContext, type ThemePreference } from '@/components/ThemeContext'
+import { useEffect, useState, type ReactNode } from 'react'
+import { useProgressStore } from '@/store/progress'
 
 interface ThemeProviderProps {
   children: ReactNode
 }
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
-  const [preference, setPreference] = useState<ThemePreference>('system')
+  const preference = useProgressStore((state) => state.settings.theme)
   const [systemDark, setSystemDark] = useState(false)
 
   useEffect(() => {
@@ -27,21 +27,14 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     document.documentElement.dataset.theme = isDark ? 'dark' : 'light'
   }, [isDark])
 
-  const contextValue = useMemo(
-    () => ({ preference, setPreference }),
-    [preference],
-  )
-
   return (
-    <ThemeContext.Provider value={contextValue}>
-      <ConfigProvider
-        theme={{
-          algorithm: isDark ? theme.darkAlgorithm : theme.defaultAlgorithm,
-          token: { colorPrimary: '#4263b4', borderRadius: 10 },
-        }}
-      >
-        {children}
-      </ConfigProvider>
-    </ThemeContext.Provider>
+    <ConfigProvider
+      theme={{
+        algorithm: isDark ? theme.darkAlgorithm : theme.defaultAlgorithm,
+        token: { colorPrimary: '#4263b4', borderRadius: 10 },
+      }}
+    >
+      {children}
+    </ConfigProvider>
   )
 }
