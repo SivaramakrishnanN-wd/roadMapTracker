@@ -4,6 +4,12 @@ import type { Activity, Day, Roadmap } from '@/types'
 export type DayStatus = 'complete' | 'partial' | 'missed' | 'today' | 'upcoming'
 
 export function todayLocal(): string {
+  if (import.meta.env.DEV) {
+    const override = new URLSearchParams(window.location.search).get('today')
+    if (override && dayjs(override, 'YYYY-MM-DD', true).isValid()) {
+      return override
+    }
+  }
   return dayjs().format('YYYY-MM-DD')
 }
 

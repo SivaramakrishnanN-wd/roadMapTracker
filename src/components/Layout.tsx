@@ -10,6 +10,8 @@ import { useState } from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import { setTheme, type ThemePreference } from '@/store/progress'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
+import { roadmap } from '@/lib/roadmap'
+import { currentDayNumber, daysLeft, todayLocal } from '@/lib/progress'
 
 const navigation = [
   { to: '/', label: 'Dashboard', icon: <HomeOutlined /> },
@@ -69,6 +71,15 @@ function SettingsPanel({
 }
 
 function AppLayout({ children }: { children: ReactNode }) {
+  const today = todayLocal()
+  const left = daysLeft(roadmap, today)
+  const headerLabel =
+    today < roadmap.meta.startDate
+      ? left
+      : today > roadmap.meta.endDate
+        ? 'Plan complete'
+        : `Day ${currentDayNumber(roadmap, today)} of ${roadmap.meta.totalDays}`
+
   return (
     <div className="app-shell">
       <header className="app-header">
@@ -79,7 +90,7 @@ function AppLayout({ children }: { children: ReactNode }) {
           <span>RoadmapTrack</span>
         </Link>
         <div className="header-center">
-          <span className="day-count">Day 1 of 90</span>
+          <span className="day-count">{headerLabel}</span>
           <nav className="desktop-nav" aria-label="Main navigation">
             <NavigationLinks />
           </nav>

@@ -155,6 +155,206 @@ a {
   display: none;
 }
 
+.daily-page,
+.syllabus-page {
+  display: grid;
+  gap: 20px;
+}
+
+.daily-toolbar {
+  display: grid;
+  grid-template-columns: auto minmax(180px, 220px) auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.day-card,
+.activity-list,
+.syllabus-collapse,
+.outside-plan {
+  border: 1px solid #e8ebf2;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgb(34 52 95 / 5%);
+}
+
+.day-card {
+  padding: 28px;
+}
+
+.day-heading,
+.page-heading,
+.area-panel-heading,
+.activity-row,
+.syllabus-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.eyebrow {
+  color: #768196;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.day-heading h1,
+.page-heading h1 {
+  margin: 6px 0 0;
+  color: #182b55;
+  letter-spacing: -0.03em;
+}
+
+.expected-outcome {
+  margin: 18px 0;
+  color: #59657a;
+  line-height: 1.6;
+}
+
+.day-progress {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  gap: 12px;
+  color: #69758b;
+}
+
+.day-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.activity-list {
+  overflow: hidden;
+}
+
+.activity-row {
+  width: 100%;
+  min-height: 82px;
+  justify-content: flex-start;
+  padding: 16px 20px;
+  border-bottom: 1px solid #edf0f5;
+  cursor: pointer;
+}
+
+.activity-row:last-child {
+  border-bottom: 0;
+}
+
+.activity-copy {
+  display: grid;
+  flex: 1;
+  gap: 4px;
+}
+
+.activity-name {
+  color: #26344f;
+  font-weight: 700;
+}
+
+.activity-details {
+  color: #69758b;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.activity-area {
+  color: #4263b4;
+  font-size: 0.78rem;
+}
+
+.activity-minutes,
+.syllabus-minutes {
+  color: #657189;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.outside-plan {
+  padding: 36px;
+}
+
+.page-heading {
+  margin-bottom: 2px;
+}
+
+.syllabus-collapse {
+  overflow: hidden;
+  background: #fff;
+}
+
+.syllabus-collapse .ant-collapse-item {
+  border-bottom: 1px solid #edf0f5;
+}
+
+.syllabus-collapse .ant-collapse-header {
+  align-items: center !important;
+  padding: 18px 20px !important;
+}
+
+.area-panel-heading {
+  width: 100%;
+}
+
+.area-panel-heading > div {
+  display: grid;
+  gap: 3px;
+}
+
+.area-panel-heading span {
+  color: #69758b;
+  font-size: 0.78rem;
+}
+
+.area-panel-heading .ant-progress {
+  width: 180px;
+  margin: 0;
+}
+
+.area-content {
+  display: grid;
+  gap: 14px;
+}
+
+.date-group {
+  display: grid;
+  gap: 4px;
+}
+
+.date-heading {
+  margin: 4px 0 6px;
+  color: #4263b4;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.syllabus-row {
+  justify-content: flex-start;
+  min-height: 58px;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.syllabus-row:hover {
+  background: #f7f8fb;
+}
+
+.syllabus-row > span:nth-child(2) {
+  display: grid;
+  flex: 1;
+  gap: 3px;
+}
+
+.syllabus-row small {
+  color: #69758b;
+  line-height: 1.4;
+}
+
 [data-theme='dark'] body,
 [data-theme='dark'] .app-shell {
   background: #111827;
@@ -190,7 +390,77 @@ a {
   box-shadow: 0 12px 32px rgb(0 0 0 / 12%);
 }
 
+[data-theme='dark'] .day-card,
+[data-theme='dark'] .activity-list,
+[data-theme='dark'] .syllabus-collapse,
+[data-theme='dark'] .outside-plan {
+  border-color: #293345;
+  background: #1b2535;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 12%);
+}
+
+[data-theme='dark'] .day-heading h1,
+[data-theme='dark'] .page-heading h1,
+[data-theme='dark'] .activity-name {
+  color: #edf2ff;
+}
+
+[data-theme='dark'] .expected-outcome,
+[data-theme='dark'] .activity-details,
+[data-theme='dark'] .activity-minutes,
+[data-theme='dark'] .syllabus-minutes,
+[data-theme='dark'] .area-panel-heading span,
+[data-theme='dark'] .syllabus-row small {
+  color: #aab5c8;
+}
+
+[data-theme='dark'] .activity-row,
+[data-theme='dark'] .syllabus-collapse .ant-collapse-item {
+  border-color: #293345;
+}
+
+[data-theme='dark'] .syllabus-row:hover {
+  background: #222d40;
+}
+
 @media (max-width: 680px) {
+  .daily-toolbar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .daily-toolbar .ant-picker {
+    width: 100%;
+  }
+
+  .day-card {
+    padding: 20px;
+  }
+
+  .day-heading {
+    align-items: flex-start;
+  }
+
+  .day-progress {
+    grid-template-columns: 1fr;
+  }
+
+  .day-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .activity-row {
+    padding: 14px;
+  }
+
+  .page-heading {
+    align-items: flex-start;
+  }
+
+  .area-panel-heading .ant-progress {
+    width: 110px;
+  }
+
   .app-shell {
     padding-bottom: 72px;
   }
