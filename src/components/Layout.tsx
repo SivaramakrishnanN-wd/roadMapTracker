@@ -153,7 +153,12 @@ function SettingsPanel({
 
   return (
     <>
-      <Drawer title="Settings" open={open} onClose={onClose} width={320}>
+      <Drawer
+        title="Settings"
+        open={open}
+        onClose={onClose}
+        width="min(100vw, 360px)"
+      >
         <div className="settings-section">
           <strong>Cloud account</strong>
           {authLoading ? (
