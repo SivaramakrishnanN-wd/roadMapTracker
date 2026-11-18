@@ -80,7 +80,7 @@ function Syllabus() {
     <section className="syllabus-page">
       <div className="page-heading">
         <div>
-          <span className="eyebrow">90-day plan</span>
+          <span className="eyebrow">{roadmap.meta.totalDays}-day plan</span>
           <h1>Syllabus</h1>
         </div>
         <Segmented

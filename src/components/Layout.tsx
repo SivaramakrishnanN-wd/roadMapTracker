@@ -4,7 +4,16 @@ import {
   HomeOutlined,
   SettingOutlined,
 } from '@ant-design/icons'
-import { Button, Drawer, Modal, Select, Tooltip, message } from 'antd'
+import {
+  Alert,
+  Button,
+  Drawer,
+  Input,
+  Modal,
+  Select,
+  Tooltip,
+  message,
+} from 'antd'
 import type { ReactNode } from 'react'
 import { useState } from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
@@ -19,6 +28,7 @@ import {
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { activitiesById, roadmap } from '@/lib/roadmap'
 import { currentDayNumber, daysLeft, todayLocal } from '@/lib/progress'
+import { useFirebaseSync } from '@/contexts/FirebaseContext'
 
 const navigation = [
   { to: '/', label: 'Dashboard', icon: <HomeOutlined /> },
@@ -63,6 +73,32 @@ function SettingsPanel({
   const progress = useAppSelector((state) => state.progress)
   const dispatch = useAppDispatch()
   const [importCandidate, setImportCandidate] = useState<ProgressState | null>(null)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [authError, setAuthError] = useState<string | null>(null)
+  const {
+    user,
+    authLoading,
+    syncStatus,
+    syncError,
+    signUp,
+    signIn,
+    logOut,
+    retrySync,
+  } = useFirebaseSync()
+
+  const authenticate = async (action: 'signIn' | 'signUp') => {
+    setAuthError(null)
+    try {
+      if (action === 'signIn') await signIn(email, password)
+      else await signUp(email, password)
+      setPassword('')
+    } catch (error) {
+      setAuthError(
+        error instanceof Error ? error.message : 'Authentication failed.',
+      )
+    }
+  }
 
   const exportProgress = () => {
     const blob = new Blob([JSON.stringify(progress, null, 2)], { type: 'application/json' })
@@ -119,6 +155,82 @@ function SettingsPanel({
     <>
       <Drawer title="Settings" open={open} onClose={onClose} width={320}>
         <div className="settings-section">
+          <strong>Cloud account</strong>
+          {authLoading ? (
+            <p>Checking authentication…</p>
+          ) : user ? (
+            <>
+              <span>{user.email}</span>
+              <span>
+                {syncStatus === 'loading'
+                  ? 'Loading cloud progress…'
+                  : syncStatus === 'syncing'
+                    ? 'Syncing progress…'
+                    : syncStatus === 'error'
+                      ? 'Cloud sync needs attention'
+                      : 'Cloud progress synced'}
+              </span>
+              {syncError && (
+                <Alert
+                  type="error"
+                  showIcon
+                  message="Cloud sync error"
+                  description={syncError}
+                  action={<Button size="small" onClick={retrySync}>Retry</Button>}
+                />
+              )}
+              <Button
+                onClick={() => {
+                  setAuthError(null)
+                  void logOut().catch((error: unknown) =>
+                    setAuthError(
+                      error instanceof Error ? error.message : 'Sign out failed.',
+                    ),
+                  )
+                }}
+              >
+                Log out
+              </Button>
+            </>
+          ) : (
+            <>
+              <Input
+                type="email"
+                autoComplete="email"
+                placeholder="Email"
+                aria-label="Account email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+              />
+              <Input.Password
+                autoComplete="current-password"
+                placeholder="Password"
+                aria-label="Account password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+              />
+              <div className="settings-actions">
+                <Button
+                  type="primary"
+                  disabled={!email || !password}
+                  onClick={() => void authenticate('signIn')}
+                >
+                  Log in
+                </Button>
+                <Button
+                  disabled={!email || !password}
+                  onClick={() => void authenticate('signUp')}
+                >
+                  Create account
+                </Button>
+              </div>
+              {authError && (
+                <Alert type="error" showIcon message={authError} />
+              )}
+            </>
+          )}
+        </div>
+        <div className="settings-section">
           <label htmlFor="theme-preference">Theme</label>
           <Select<ThemePreference>
             id="theme-preference"
@@ -149,7 +261,9 @@ function SettingsPanel({
           <strong>Reset</strong>
           <Button danger onClick={confirmReset}>Reset progress</Button>
         </div>
-        <small className="storage-key">Stored locally as {PROGRESS_STORAGE_KEY}</small>
+        <small className="storage-key">
+          Local backup and migration source: {PROGRESS_STORAGE_KEY}
+        </small>
       </Drawer>
       <Modal
         open={Boolean(importCandidate)}

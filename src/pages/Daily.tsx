@@ -1,10 +1,16 @@
 import { Button, Checkbox, DatePicker, Progress, Tag } from 'antd'
 import dayjs from 'dayjs'
-import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
+import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { roadmap } from '@/lib/roadmap'
 import { todayLocal } from '@/lib/progress'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { setDayDone, toggleActivity } from '@/store/progress'
+import {
+  isWeekend,
+  plannedHoursForDate,
+  selectBacklogSummary,
+  selectOverdueActivities,
+} from '@/lib/progress'
 
 function clampDate(date: string): string {
   if (date < roadmap.meta.startDate) return roadmap.meta.startDate
@@ -14,12 +20,16 @@ function clampDate(date: string): string {
 
 function Daily() {
   const { date } = useParams()
+  const location = useLocation()
   const navigate = useNavigate()
   const dispatch = useAppDispatch()
   const completed = useAppSelector((state) => state.progress.completed)
+  const today = todayLocal()
+  const backlog = selectOverdueActivities(today, completed)
+  const backlogSummary = selectBacklogSummary(today, completed)
 
   if (!date) {
-    return <Navigate replace to={`/daily/${clampDate(todayLocal())}`} />
+    return <Navigate replace to={`/daily/${clampDate(todayLocal())}${location.search}`} />
   }
 
   const day = roadmap.days.find((item) => item.date === date)
@@ -41,6 +51,8 @@ function Daily() {
   const progressPercent = required.length
     ? Math.round((doneRequired / required.length) * 100)
     : 0
+  const viewingToday = date === today
+  const weekend = isWeekend(day.date)
 
   const goToDate = (nextDate: string) => navigate(`/daily/${nextDate}`)
 
@@ -70,11 +82,18 @@ function Daily() {
         <div className="day-heading">
           <div>
             <span className="eyebrow">Day {day.dayNumber} · {day.weekday}</span>
-            <h1>{day.topic}</h1>
+            <h1>{viewingToday ? "Today's plan" : day.topic}</h1>
+            {viewingToday && <p className="today-topic">{day.topic}</p>}
           </div>
           <Tag color="blue">{day.area}</Tag>
         </div>
         <p className="expected-outcome"><strong>Expected outcome:</strong> {day.expectedOutcome}</p>
+        <p className="planned-hours">
+          Planned hours: <strong>{plannedHoursForDate(day.date)} h</strong>
+          {viewingToday && weekend && (
+            <span> · Carried over: {backlogSummary.totalHours.toFixed(1)} h</span>
+          )}
+        </p>
         <div className="day-progress">
           <span>{doneRequired} of {required.length} required items</span>
           <Progress percent={progressPercent} />
@@ -111,6 +130,62 @@ function Daily() {
           </label>
         ))}
       </div>
+      {viewingToday && (
+        <section className="backlog-section">
+          <div className="backlog-summary">
+            <h2>Carried over</h2>
+            <span>
+              Carried over: {backlogSummary.itemCount} items, {backlogSummary.totalHours.toFixed(1)} h
+            </span>
+          </div>
+          {weekend ? (
+            <div className="activity-list backlog-list">
+              {backlog.length === 0 ? (
+                <p className="empty-backlog">No overdue activities.</p>
+              ) : (
+                backlog.map(({ activity, originalDate }) => (
+                  <label className="activity-row" key={activity.id}>
+                    <Checkbox
+                      checked={Boolean(completed[activity.id])}
+                      onChange={() => dispatch(toggleActivity(activity.id))}
+                      aria-label={`Complete carried over activity ${activity.label}`}
+                    />
+                    <span className="activity-copy">
+                      <span className="activity-name">{activity.label}</span>
+                      <span className="activity-details">From {originalDate}</span>
+                    </span>
+                    <span className="activity-minutes">{activity.minutes} min</span>
+                  </label>
+                ))
+              )}
+            </div>
+          ) : (
+            <details className="backlog-details">
+              <summary>Suggested for the weekend</summary>
+              <div className="activity-list backlog-list">
+                {backlog.length === 0 ? (
+                  <p className="empty-backlog">No overdue activities.</p>
+                ) : (
+                  backlog.map(({ activity, originalDate }) => (
+                    <label className="activity-row" key={activity.id}>
+                      <Checkbox
+                        checked={Boolean(completed[activity.id])}
+                        onChange={() => dispatch(toggleActivity(activity.id))}
+                        aria-label={`Complete carried over activity ${activity.label}`}
+                      />
+                      <span className="activity-copy">
+                        <span className="activity-name">{activity.label}</span>
+                        <span className="activity-details">From {originalDate}</span>
+                      </span>
+                      <span className="activity-minutes">{activity.minutes} min</span>
+                    </label>
+                  ))
+                )}
+              </div>
+            </details>
+          )}
+        </section>
+      )}
     </section>
   )
 }

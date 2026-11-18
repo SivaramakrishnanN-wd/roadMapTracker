@@ -1,7 +1,18 @@
 import dayjs from 'dayjs'
 import type { Activity, Day, Roadmap } from '@/types'
+import { roadmap } from '@/lib/roadmap'
 
 export type DayStatus = 'complete' | 'partial' | 'missed' | 'today' | 'upcoming'
+
+export interface OverdueActivity {
+  activity: Activity
+  originalDate: string
+}
+
+export interface BacklogSummary {
+  itemCount: number
+  totalHours: number
+}
 
 export function todayLocal(): string {
   if (import.meta.env.DEV) {
@@ -53,6 +64,61 @@ export function percentPerArea(
       return [area, value && value.total > 0 ? (value.done / value.total) * 100 : 0]
     }),
   )
+}
+
+export function selectOverdueActivities(
+  today: string,
+  completed: Record<string, true>,
+  plan: Roadmap = roadmap,
+): OverdueActivity[] {
+  return plan.days
+    .filter(
+      (day) =>
+        day.date >= plan.meta.trackingStartDate && day.date < today,
+    )
+    .flatMap((day) =>
+      day.activities.flatMap((activity, activityIndex) =>
+        !activity.isStretch && !completed[activity.id]
+          ? [{ activity, originalDate: day.date, activityIndex }]
+          : [],
+      ),
+    )
+    .sort(
+      (a, b) =>
+        a.originalDate.localeCompare(b.originalDate) ||
+        a.activityIndex - b.activityIndex,
+    )
+    .map(({ activity, originalDate }) => ({ activity, originalDate }))
+}
+
+export function selectBacklogSummary(
+  today: string,
+  completed: Record<string, true>,
+  plan: Roadmap = roadmap,
+): BacklogSummary {
+  const activities = selectOverdueActivities(today, completed, plan)
+
+  return {
+    itemCount: activities.length,
+    totalHours:
+      activities.reduce((total, { activity }) => total + activity.minutes, 0) / 60,
+  }
+}
+
+export function isWeekend(date: string): boolean {
+  const dayOfWeek = dayjs(date).day()
+  return dayOfWeek === 0 || dayOfWeek === 6
+}
+
+export function plannedHoursForDate(
+  date: string,
+  plan: Roadmap = roadmap,
+): number {
+  return isWeekend(date) ? plan.meta.weekendHours : plan.meta.weekdayHours
+}
+
+export function totalPlannedHours(plan: Roadmap = roadmap): number {
+  return plan.days.reduce((total, day) => total + day.plannedHours, 0)
 }
 
 export function currentDayNumber(roadmap: Roadmap, today: string): number {

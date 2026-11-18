@@ -8,6 +8,7 @@ export interface Meta {
   name: string
   startDate: string
   endDate: string
+  trackingStartDate: string
   totalDays: number
   weekdayHours: number
   weekendHours: number

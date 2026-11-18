@@ -1,15 +1,15 @@
 # RoadmapTrack
 
-RoadmapTrack is a no-login React app for tracking a 90-day interview-preparation roadmap from 16 November 2026 to 13 February 2027.
+RoadmapTrack is an email/password-authenticated React app for tracking an interview-preparation roadmap.
 
-Progress is stored locally in the browser with Redux Toolkit and `localStorage`.
+Progress is synchronized with Firebase Cloud Firestore using Redux Toolkit. The roadmap itself remains in `src/data/roadmap.json`.
 
 ## Features
 
 - **Dashboard** (`/`) — overall completion, required items remaining, hours completed, today's progress, and progress by area
 - **Daily Tracker** (`/daily` and `/daily/:date`) — navigate plan dates, view activities, mark items complete, and mark or clear an entire day
 - **Syllabus** (`/syllabus`) — browse activities by area, filter by All/Pending/Done, and jump to daily plans
-- **Theme** — light, dark, or system preference persisted locally
+- **Theme** — light, dark, or system preference synchronized with progress
 - **Backup** — export progress as JSON, preview and confirm imports, or reset progress
 
 ## Tech Stack
@@ -69,4 +69,4 @@ http://localhost:5173/daily?today=2026-11-16
 
 ## Carried-over tasks
 
-Incomplete, non-stretch activities from prior plan days are shown as carried over on today's Daily Tracker. Backlog tracking starts at `TRACKING_START_DATE` (`src/config.ts`), currently `2026-11-16`; earlier plan activities remain visible but are excluded from backlog.
+Incomplete, non-stretch activities from prior plan days are shown as carried over on today's Daily Tracker. The `trackingStartDate` in roadmap metadata controls where backlog tracking begins; earlier activities remain visible but are excluded from backlog.

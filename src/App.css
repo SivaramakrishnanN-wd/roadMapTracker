@@ -233,6 +233,58 @@ a {
   overflow: hidden;
 }
 
+.backlog-section {
+  display: grid;
+  gap: 12px;
+}
+
+.backlog-summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.backlog-summary h2 {
+  margin: 0;
+  color: #182b55;
+  font-size: 1.15rem;
+}
+
+.backlog-summary > span,
+.planned-hours {
+  color: #69758b;
+}
+
+.backlog-details {
+  border: 1px solid #e8ebf2;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.backlog-details summary {
+  padding: 14px 18px;
+  color: #4263b4;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.backlog-list {
+  border-radius: 0 0 12px 12px;
+  box-shadow: none;
+}
+
+.empty-backlog {
+  margin: 0;
+  padding: 18px;
+  color: #69758b;
+}
+
+.today-topic {
+  margin: 6px 0 0;
+  color: #69758b;
+}
+
 .activity-row {
   width: 100%;
   min-height: 82px;
@@ -414,6 +466,13 @@ a {
   padding: 24px;
 }
 
+.backlog-dashboard-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
 .metric {
   display: block;
   margin-top: 8px;
@@ -483,6 +542,46 @@ a {
 
 .storage-key {
   color: #8791a3;
+}
+
+.auth-page,
+.auth-loading {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+}
+
+.auth-card {
+  width: min(100%, 420px);
+  border-radius: 18px;
+}
+
+.auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.auth-brand h3.ant-typography {
+  margin: 0;
+}
+
+.auth-form {
+  display: grid;
+  gap: 14px;
+}
+
+.auth-loading {
+  align-content: center;
+  gap: 16px;
+  justify-items: center;
+}
+
+.auth-loading-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
 }
 
 [data-theme='dark'] body,
@@ -570,8 +669,18 @@ a {
 [data-theme='dark'] .dashboard-card p,
 [data-theme='dark'] .area-bar > div,
 [data-theme='dark'] .completion-ring .ant-progress-text small,
-[data-theme='dark'] .storage-key {
+[data-theme='dark'] .storage-key,
+[data-theme='dark'] .backlog-summary h2,
+[data-theme='dark'] .backlog-summary > span,
+[data-theme='dark'] .planned-hours,
+[data-theme='dark'] .today-topic,
+[data-theme='dark'] .empty-backlog {
   color: #aab5c8;
+}
+
+[data-theme='dark'] .backlog-details {
+  border-color: #293345;
+  background: #1b2535;
 }
 
 @media (max-width: 680px) {
@@ -584,6 +693,20 @@ a {
   .dashboard-grid,
   .today-card {
     grid-template-columns: 1fr;
+  }
+
+  .backlog-dashboard-card,
+  .backlog-summary {
+    align-items: flex-start;
+  }
+
+  .backlog-dashboard-card {
+    flex-direction: column;
+  }
+
+  .backlog-summary {
+    flex-direction: column;
+    gap: 4px;
   }
 
   .today-progress a {

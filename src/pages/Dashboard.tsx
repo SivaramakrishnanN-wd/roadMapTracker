@@ -1,11 +1,13 @@
-import { Button, Progress } from 'antd'
-import { Link } from 'react-router-dom'
+import { Button, Progress, Tag } from 'antd'
+import { Link, useLocation } from 'react-router-dom'
 import { roadmap } from '@/lib/roadmap'
 import {
   currentDayNumber,
   daysLeft,
   overallPercent,
   percentPerArea,
+  selectBacklogSummary,
+  totalPlannedHours,
   todayLocal,
 } from '@/lib/progress'
 import { useAppSelector } from '@/store/hooks'
@@ -17,12 +19,14 @@ function clampDate(date: string): string {
 }
 
 function Dashboard() {
+  const location = useLocation()
   const completed = useAppSelector((state) => state.progress.completed)
   const today = todayLocal()
   const todayDate = clampDate(today)
   const todayDay = roadmap.days.find((day) => day.date === todayDate)
   const overall = overallPercent(roadmap, completed)
   const areaPercent = percentPerArea(roadmap, completed)
+  const backlogSummary = selectBacklogSummary(today, completed)
 
   const allActivities = roadmap.days.flatMap((day) => day.activities)
   const requiredActivities = allActivities.filter((activity) => !activity.isStretch)
@@ -43,6 +47,7 @@ function Dashboard() {
     : 0
 
   const left = daysLeft(roadmap, today)
+  const plannedHours = totalPlannedHours(roadmap)
 
   return (
     <section className="dashboard-page">
@@ -77,9 +82,22 @@ function Dashboard() {
         <article className="dashboard-card">
           <span className="eyebrow">Hours</span>
           <strong className="metric">{hoursDone.toFixed(1)} h</strong>
-          <p>of 255 planned hours</p>
+          <p>of {plannedHours} planned hours</p>
         </article>
       </div>
+
+      <article className="dashboard-card backlog-dashboard-card">
+        <div>
+          <span className="eyebrow">Behind schedule</span>
+          <strong className="metric">{backlogSummary.itemCount} overdue items</strong>
+          <p>{backlogSummary.totalHours.toFixed(1)} h to catch up</p>
+        </div>
+        <Tag color={backlogSummary.itemCount === 0 ? 'green' : 'orange'}>
+          {backlogSummary.itemCount === 0
+            ? 'On track'
+            : `Behind by ${backlogSummary.totalHours.toFixed(1)} h`}
+        </Tag>
+      </article>
 
       <article className="dashboard-card today-card">
         <div>
@@ -89,7 +107,7 @@ function Dashboard() {
         </div>
         <div className="today-progress">
           <Progress percent={todayPercent} />
-          <Link to={`/daily/${todayDate}`}>
+          <Link to={`/daily/${todayDate}${location.search}`}>
             <Button type="primary">Open today</Button>
           </Link>
         </div>
