@@ -1,125 +1,95 @@
-import { createStore } from 'zustand/vanilla'
-import { useStore } from 'zustand'
-import { persist } from 'zustand/middleware'
+import { configureStore, createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { activitiesById, getDay } from '@/lib/roadmap'
 
 export type ThemePreference = 'light' | 'dark' | 'system'
 
 export interface ProgressState {
-  version: 1
-  completed: Record<string, string>
-  notes: Record<string, string>
-  carried: Record<string, string>
-  settings: { theme: ThemePreference }
+  completed: Record<string, true>
+  theme: ThemePreference
 }
 
-interface ProgressActions {
-  toggleActivity: (id: string) => void
-  setDayDone: (date: string, done: boolean) => void
-  setNote: (date: string, text: string) => void
-  carryForward: (activityId: string, targetDate: string) => void
-  uncarry: (activityId: string) => void
-  importState: (state: ProgressState) => void
-  reset: () => void
-  setTheme: (theme: ThemePreference) => void
+export const PROGRESS_STORAGE_KEY = 'roadmaptrack:v1'
+
+export const initialProgressState: ProgressState = {
+  completed: {},
+  theme: 'system',
 }
 
-export type ProgressStore = ProgressState & ProgressActions
+export function loadProgress(): ProgressState {
+  try {
+    const saved = localStorage.getItem(PROGRESS_STORAGE_KEY)
+    if (!saved) return initialProgressState
 
-export const PROGRESS_STORAGE_KEY = 'roadmaptrack:progress:v1'
+    const parsed = JSON.parse(saved) as Partial<ProgressState>
+    const completed =
+      parsed.completed && typeof parsed.completed === 'object'
+        ? parsed.completed
+        : {}
+    const theme: ThemePreference =
+      parsed.theme === 'light' || parsed.theme === 'dark' || parsed.theme === 'system'
+        ? parsed.theme
+        : 'system'
 
-function createInitialState(): ProgressState {
-  return {
-    version: 1,
-    completed: {},
-    notes: {},
-    carried: {},
-    settings: { theme: 'system' },
+    return { completed, theme }
+  } catch {
+    return initialProgressState
   }
 }
 
-export function createProgressStore() {
-  return createStore<ProgressStore>()(
-    persist(
-      (set) => ({
-        ...createInitialState(),
-        toggleActivity: (id) => {
-          if (!activitiesById.has(id)) {
-            throw new RangeError(`Unknown activity id: ${id}`)
-          }
+const progressSlice = createSlice({
+  name: 'progress',
+  initialState: loadProgress,
+  reducers: {
+    toggleActivity(state, action: PayloadAction<string>) {
+      if (!activitiesById.has(action.payload)) {
+        throw new RangeError(`Unknown activity id: ${action.payload}`)
+      }
+      if (state.completed[action.payload]) {
+        delete state.completed[action.payload]
+      } else {
+        state.completed[action.payload] = true
+      }
+    },
+    setDayDone(state, action: PayloadAction<{ date: string; done: boolean }>) {
+      const day = getDay(action.payload.date)
+      if (!day) {
+        throw new RangeError(`Date is outside the roadmap: ${action.payload.date}`)
+      }
+      day.activities.forEach(({ id }) => {
+        if (action.payload.done) state.completed[id] = true
+        else delete state.completed[id]
+      })
+    },
+    setTheme(state, action: PayloadAction<ThemePreference>) {
+      state.theme = action.payload
+    },
+    importProgress(_state, action: PayloadAction<ProgressState>) {
+      return {
+        completed: { ...action.payload.completed },
+        theme: action.payload.theme,
+      }
+    },
+    resetProgress() {
+      return initialProgressState
+    },
+  },
+})
 
-          set((state) => {
-            const completed = { ...state.completed }
+export const {
+  toggleActivity,
+  setDayDone,
+  setTheme,
+  importProgress,
+  resetProgress,
+} = progressSlice.actions
 
-            if (completed[id]) {
-              delete completed[id]
-            } else {
-              completed[id] = new Date().toISOString()
-            }
+export const store = configureStore({
+  reducer: { progress: progressSlice.reducer },
+})
 
-            return { completed }
-          })
-        },
-        setDayDone: (date, done) => {
-          const day = getDay(date)
+store.subscribe(() => {
+  localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(store.getState().progress))
+})
 
-          if (!day) {
-            throw new RangeError(`Date is outside the roadmap: ${date}`)
-          }
-
-          set((state) => {
-            const completed = { ...state.completed }
-
-            day.activities.forEach(({ id }) => {
-              if (done) {
-                completed[id] = completed[id] ?? new Date().toISOString()
-              } else {
-                delete completed[id]
-              }
-            })
-
-            return { completed }
-          })
-        },
-        setNote: (date, text) =>
-          set((state) => ({ notes: { ...state.notes, [date]: text } })),
-        carryForward: (activityId, targetDate) => {
-          if (!activitiesById.has(activityId)) {
-            throw new RangeError(`Unknown activity id: ${activityId}`)
-          }
-          if (!getDay(targetDate)) {
-            throw new RangeError(`Date is outside the roadmap: ${targetDate}`)
-          }
-
-          set((state) => ({
-            carried: { ...state.carried, [activityId]: targetDate },
-          }))
-        },
-        uncarry: (activityId) =>
-          set((state) => {
-            const carried = { ...state.carried }
-            delete carried[activityId]
-            return { carried }
-          }),
-        importState: (state) =>
-          set({
-            version: state.version,
-            completed: { ...state.completed },
-            notes: { ...state.notes },
-            carried: { ...state.carried },
-            settings: { ...state.settings },
-          }),
-        reset: () => set(createInitialState()),
-        setTheme: (theme) =>
-          set((state) => ({ settings: { ...state.settings, theme } })),
-      }),
-      { name: PROGRESS_STORAGE_KEY },
-    ),
-  )
-}
-
-export const progressStore = createProgressStore()
-
-export function useProgressStore<T>(selector: (state: ProgressStore) => T): T {
-  return useStore(progressStore, selector)
-}
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch

@@ -1,13 +1,13 @@
 import { ConfigProvider, theme } from 'antd'
 import { useEffect, useState, type ReactNode } from 'react'
-import { useProgressStore } from '@/store/progress'
+import { useAppSelector } from '@/store/hooks'
 
 interface ThemeProviderProps {
   children: ReactNode
 }
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
-  const preference = useProgressStore((state) => state.settings.theme)
+  const preference = useAppSelector((state) => state.progress.theme)
   const [systemDark, setSystemDark] = useState(false)
 
   useEffect(() => {

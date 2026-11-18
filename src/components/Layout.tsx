@@ -8,7 +8,8 @@ import { Button, Drawer, Select, Tooltip } from 'antd'
 import type { ReactNode } from 'react'
 import { useState } from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
-import { useProgressStore, type ThemePreference } from '@/store/progress'
+import { setTheme, type ThemePreference } from '@/store/progress'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
 
 const navigation = [
   { to: '/', label: 'Dashboard', icon: <HomeOutlined /> },
@@ -49,8 +50,8 @@ function SettingsPanel({
   open: boolean
   onClose: () => void
 }) {
-  const preference = useProgressStore((state) => state.settings.theme)
-  const setPreference = useProgressStore((state) => state.setTheme)
+  const preference = useAppSelector((state) => state.progress.theme)
+  const dispatch = useAppDispatch()
 
   return (
     <Drawer title="Settings" open={open} onClose={onClose} width={320}>
@@ -59,7 +60,7 @@ function SettingsPanel({
         id="theme-preference"
         aria-label="Theme"
         value={preference}
-        onChange={setPreference}
+        onChange={(theme) => dispatch(setTheme(theme))}
         options={themeOptions}
         style={{ display: 'block', marginTop: 8, width: '100%' }}
       />
