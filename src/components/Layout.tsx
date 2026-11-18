@@ -4,13 +4,20 @@ import {
   HomeOutlined,
   SettingOutlined,
 } from '@ant-design/icons'
-import { Button, Drawer, Select, Tooltip } from 'antd'
+import { Button, Drawer, Modal, Select, Tooltip, message } from 'antd'
 import type { ReactNode } from 'react'
 import { useState } from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
-import { setTheme, type ThemePreference } from '@/store/progress'
+import {
+  importProgress,
+  PROGRESS_STORAGE_KEY,
+  resetProgress,
+  setTheme,
+  type ProgressState,
+  type ThemePreference,
+} from '@/store/progress'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
-import { roadmap } from '@/lib/roadmap'
+import { activitiesById, roadmap } from '@/lib/roadmap'
 import { currentDayNumber, daysLeft, todayLocal } from '@/lib/progress'
 
 const navigation = [
@@ -53,20 +60,110 @@ function SettingsPanel({
   onClose: () => void
 }) {
   const preference = useAppSelector((state) => state.progress.theme)
+  const progress = useAppSelector((state) => state.progress)
   const dispatch = useAppDispatch()
+  const [importCandidate, setImportCandidate] = useState<ProgressState | null>(null)
+
+  const exportProgress = () => {
+    const blob = new Blob([JSON.stringify(progress, null, 2)], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.href = url
+    link.download = `roadmaptrack-progress-${todayLocal()}.json`
+    link.click()
+    URL.revokeObjectURL(url)
+  }
+
+  const readImport = async (file: File) => {
+    try {
+      const parsed = JSON.parse(await file.text()) as Partial<ProgressState>
+      if (
+        !parsed.completed ||
+        typeof parsed.completed !== 'object' ||
+        (parsed.theme !== 'light' && parsed.theme !== 'dark' && parsed.theme !== 'system')
+      ) {
+        throw new Error('Invalid progress file')
+      }
+
+      const completed: Record<string, true> = {}
+      Object.entries(parsed.completed).forEach(([id, value]) => {
+        if (value === true && activitiesById.has(id)) completed[id] = true
+      })
+
+      setImportCandidate({ completed, theme: parsed.theme })
+    } catch {
+      message.error('Could not import this progress file.')
+    }
+  }
+
+  const confirmImport = () => {
+    if (!importCandidate) return
+    dispatch(importProgress(importCandidate))
+    setImportCandidate(null)
+    message.success('Progress imported.')
+  }
+
+  const confirmReset = () => {
+    Modal.confirm({
+      title: 'Reset all progress?',
+      content: 'This clears completed activities and restores the system theme.',
+      okText: 'Reset',
+      okButtonProps: { danger: true },
+      onOk: () => dispatch(resetProgress()),
+    })
+  }
+
+  const doneCount = Object.keys(progress.completed).length
 
   return (
-    <Drawer title="Settings" open={open} onClose={onClose} width={320}>
-      <label htmlFor="theme-preference">Theme</label>
-      <Select<ThemePreference>
-        id="theme-preference"
-        aria-label="Theme"
-        value={preference}
-        onChange={(theme) => dispatch(setTheme(theme))}
-        options={themeOptions}
-        style={{ display: 'block', marginTop: 8, width: '100%' }}
-      />
-    </Drawer>
+    <>
+      <Drawer title="Settings" open={open} onClose={onClose} width={320}>
+        <div className="settings-section">
+          <label htmlFor="theme-preference">Theme</label>
+          <Select<ThemePreference>
+            id="theme-preference"
+            aria-label="Theme"
+            value={preference}
+            onChange={(theme) => dispatch(setTheme(theme))}
+            options={themeOptions}
+            style={{ display: 'block', marginTop: 8, width: '100%' }}
+          />
+        </div>
+        <div className="settings-section">
+          <strong>Backup</strong>
+          <div className="settings-actions">
+            <Button onClick={exportProgress}>Export progress</Button>
+            <input
+              aria-label="Import progress JSON"
+              type="file"
+              accept="application/json,.json"
+              onChange={(event) => {
+                const file = event.target.files?.[0]
+                event.target.value = ''
+                if (file) void readImport(file)
+              }}
+            />
+          </div>
+        </div>
+        <div className="settings-section">
+          <strong>Reset</strong>
+          <Button danger onClick={confirmReset}>Reset progress</Button>
+        </div>
+        <small className="storage-key">Stored locally as {PROGRESS_STORAGE_KEY}</small>
+      </Drawer>
+      <Modal
+        open={Boolean(importCandidate)}
+        title="Import progress?"
+        onCancel={() => setImportCandidate(null)}
+        onOk={confirmImport}
+        okText="Replace progress"
+      >
+        <p>
+          This file contains {Object.keys(importCandidate?.completed ?? {}).length} completed activities
+          and theme “{importCandidate?.theme}”. It will replace your current {doneCount} completed items.
+        </p>
+      </Modal>
+    </>
   )
 }
 

@@ -355,6 +355,136 @@ a {
   line-height: 1.4;
 }
 
+.dashboard-page {
+  display: grid;
+  gap: 20px;
+}
+
+.dashboard-hero,
+.dashboard-card {
+  border: 1px solid #e8ebf2;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgb(34 52 95 / 5%);
+}
+
+.dashboard-hero {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  padding: 28px 36px;
+}
+
+.completion-ring {
+  flex: 0 0 auto;
+}
+
+.completion-ring .ant-progress-text {
+  display: grid;
+}
+
+.completion-ring .ant-progress-text strong {
+  font-size: 1.8rem;
+}
+
+.completion-ring .ant-progress-text small {
+  color: #69758b;
+  font-size: 0.76rem;
+}
+
+.hero-copy h1 {
+  margin: 6px 0 8px;
+  color: #182b55;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  letter-spacing: -0.04em;
+}
+
+.hero-copy p {
+  margin: 0;
+  color: #69758b;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  padding: 24px;
+}
+
+.metric {
+  display: block;
+  margin-top: 8px;
+  color: #182b55;
+  font-size: 1.8rem;
+}
+
+.dashboard-card p {
+  margin: 6px 0 0;
+  color: #69758b;
+}
+
+.today-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+  align-items: center;
+  gap: 24px;
+}
+
+.today-card h2 {
+  margin: 6px 0;
+  color: #182b55;
+}
+
+.today-progress {
+  display: grid;
+  gap: 12px;
+}
+
+.today-progress a {
+  justify-self: end;
+}
+
+.area-bars {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.area-bar {
+  display: grid;
+  gap: 5px;
+}
+
+.area-bar > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #59657a;
+}
+
+.settings-section {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.settings-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.settings-actions input {
+  max-width: 100%;
+  color: #69758b;
+}
+
+.storage-key {
+  color: #8791a3;
+}
+
 [data-theme='dark'] body,
 [data-theme='dark'] .app-shell {
   background: #111827;
@@ -423,7 +553,47 @@ a {
   background: #222d40;
 }
 
+[data-theme='dark'] .dashboard-hero,
+[data-theme='dark'] .dashboard-card {
+  border-color: #293345;
+  background: #1b2535;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 12%);
+}
+
+[data-theme='dark'] .hero-copy h1,
+[data-theme='dark'] .metric,
+[data-theme='dark'] .today-card h2 {
+  color: #edf2ff;
+}
+
+[data-theme='dark'] .hero-copy p,
+[data-theme='dark'] .dashboard-card p,
+[data-theme='dark'] .area-bar > div,
+[data-theme='dark'] .completion-ring .ant-progress-text small,
+[data-theme='dark'] .storage-key {
+  color: #aab5c8;
+}
+
 @media (max-width: 680px) {
+  .dashboard-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+
+  .dashboard-grid,
+  .today-card {
+    grid-template-columns: 1fr;
+  }
+
+  .today-progress a {
+    justify-self: stretch;
+  }
+
+  .today-progress a button {
+    width: 100%;
+  }
+
   .daily-toolbar {
     grid-template-columns: 1fr 1fr;
   }
